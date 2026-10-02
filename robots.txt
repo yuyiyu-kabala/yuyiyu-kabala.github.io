@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yuyiyu-kabala.github.io/sitemap.xml
