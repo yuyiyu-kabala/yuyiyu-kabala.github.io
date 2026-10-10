@@ -37,12 +37,11 @@
 
   function conceptPages(project) {
     return `<section class="concept-scroll ${project.boardTheme === 'light' ? 'board-light' : 'board-dark'}" aria-label="${escapeHtml(project.title)}作品" ${project.boardBackground ? `style="--board-background:url('${asset(project.boardBackground)}')"` : ''}>
-      ${project.slides.map((sheet,index) => `<article class="concept-sheet sheet-${escapeHtml(sheet.kind)} ${sheet.kind === 'images' && sheet.images[0].src.includes('depth') ? 'sheet-portrait' : ''}" data-sheet="${index}" aria-label="${escapeHtml(sheet.title)}">
+      ${project.slides.map((sheet,index) => `<article class="concept-sheet sheet-${escapeHtml(sheet.kind)}" style="--sheet-ratio:${sheet.ratio || 16 / 9}" data-sheet="${index}" data-category="${sheet.category}" aria-label="${escapeHtml(sheet.title)}">
         <div class="sheet-art ${sheet.kind === 'references' ? `reference-mosaic mosaic-${sheet.images.length}` : ''}">
-        ${sheet.kind === 'reserved' ? '<div class="empty-art-slot" aria-label="完成图预留"></div>'
-          : sheet.kind === 'compare' ? `<figure class="gallery-image gallery-image-compare" data-clay-reveal><div class="gallery-compare-frame" style="--image-ratio:${sheet.images[0].aspect}"><img src="${asset(sheet.images[0].src)}" alt="${escapeHtml(sheet.images[0].alt)}" loading="lazy"><img class="gallery-clay" src="${asset(sheet.images[0].clay)}" alt="" aria-hidden="true" loading="lazy"></div><button type="button" class="gallery-reveal-toggle art-control" data-icon-toggle aria-label="查看白模" aria-pressed="false">◐</button></figure>`
-          : sheet.kind === 'sequence' ? `<div class="drawing-sequence"><div class="drawing-stage soft-edge">${sheet.images.map((item,n)=>`<img src="${asset(item.src)}" alt="${escapeHtml(item.alt)}" class="drawing-frame ${n===0?'is-active':''}" aria-hidden="${n!==0}" loading="lazy">`).join('')}</div><button type="button" class="drawing-pause art-control" aria-label="暂停播放" aria-pressed="false">Ⅱ</button></div>`
-          : sheet.images.map(item=>`<a class="sheet-image ${item.softEdge?'soft-edge':''}" href="${asset(item.src)}" target="_blank" rel="noopener" aria-label="放大查看：${escapeHtml(item.alt)}"><img src="${asset(item.src)}" alt="${escapeHtml(item.alt)}" loading="lazy"></a>`).join('')}
+        ${sheet.kind === 'compare' ? `<figure class="gallery-image gallery-image-compare" style="--image-ratio:${sheet.images[0].aspect}" data-clay-reveal><div class="gallery-compare-frame"><img src="${asset(sheet.images[0].src)}" alt="${escapeHtml(sheet.images[0].alt)}" loading="lazy"><img class="gallery-clay" src="${asset(sheet.images[0].clay)}" alt="" aria-hidden="true" loading="lazy"></div><button type="button" class="gallery-reveal-toggle art-control" data-icon-toggle aria-label="查看白模" aria-pressed="false">◐</button></figure>`
+          : sheet.kind === 'sequence' ? `<div class="drawing-sequence"><div class="drawing-stage">${sheet.images.map((item,n)=>`<img src="${asset(item.src)}" alt="${escapeHtml(item.alt)}" class="drawing-frame ${n===0?'is-active':''}" aria-hidden="${n!==0}" loading="lazy">`).join('')}</div><button type="button" class="drawing-pause art-control" aria-label="暂停播放" aria-pressed="false">Ⅱ</button></div>`
+          : sheet.images.map(item=>`<a class="sheet-image" href="${asset(item.src)}" target="_blank" rel="noopener" aria-label="放大查看：${escapeHtml(item.alt)}"><img src="${asset(item.src)}" alt="${escapeHtml(item.alt)}" loading="lazy"></a>`).join('')}
         </div>
       </article>`).join('')}
     </section>`;
@@ -180,7 +179,7 @@
     let pinned = false;
     const show = (percent) => figure.style.setProperty('--reveal', `${percent * 1.2 - 10}%`);
     frame.addEventListener('pointermove', (event) => {
-      if (pinned) return;
+      if (pinned || event.pointerType === 'touch') return;
       figure.classList.remove('is-returning');
       const bounds = frame.getBoundingClientRect();
       show(Math.max(0, Math.min(100, (event.clientX - bounds.left) / bounds.width * 100)));

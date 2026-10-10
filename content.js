@@ -15,68 +15,100 @@ window.siteContent = {
     "status": "approved",
     "publishable": true,
     "stateLabel": "SELECTED CONCEPT",
-    "cover": "assets/portfolio/concepts-20261010/wine-color.webp",
+    "cover": "assets/portfolio/concepts-fit-20261010/wine-color.webp",
     "alt": "酒窖雕像完成图",
     "thesis": "一尊雕像，唤醒被时间封存的地下酒窖。",
-    "boardBackground": "assets/portfolio/concepts-20261010/wine-background.webp",
+    "boardBackground": "assets/portfolio/concepts-fit-20261010/wine-background.webp",
     "boardTheme": "light",
     "slides": [
       {
         "title": "完成图与白模",
         "kind": "compare",
+        "category": 1,
         "images": [
           {
-            "src": "assets/portfolio/concepts-20261010/wine-color.webp",
+            "src": "assets/portfolio/concepts-fit-20261010/wine-color.webp",
             "alt": "酒窖雕像完成图",
-            "clay": "assets/portfolio/concepts-20261010/wine-clay.webp",
             "aspect": 0.562799043062201,
-            "caption": "完成图 / 白模",
-            "softEdge": false
+            "clay": "assets/portfolio/concepts-fit-20261010/wine-clay.webp"
           }
-        ]
+        ],
+        "ratio": 0.562799043062201
       },
       {
         "title": "手绘过程",
         "kind": "sequence",
-        "note": "从 0 号到 5 号，逐步展开画面。",
+        "category": 3,
         "images": [
           {
-            "src": "assets/portfolio/concepts-20261010/wine-sketch-0.webp",
+            "src": "assets/portfolio/concepts-fit-20261010/wine-sketch-0.webp",
             "alt": "酒窖手绘 0 号",
-            "number": 0,
-            "softEdge": true
+            "aspect": 0.562799043062201,
+            "number": 0
           },
           {
-            "src": "assets/portfolio/concepts-20261010/wine-sketch-1.webp",
+            "src": "assets/portfolio/concepts-fit-20261010/wine-sketch-1.webp",
             "alt": "酒窖手绘 1 号",
-            "number": 1,
-            "softEdge": true
+            "aspect": 0.562799043062201,
+            "number": 1
           },
           {
-            "src": "assets/portfolio/concepts-20261010/wine-sketch-2.webp",
+            "src": "assets/portfolio/concepts-fit-20261010/wine-sketch-2.webp",
             "alt": "酒窖手绘 2 号",
-            "number": 2,
-            "softEdge": true
+            "aspect": 0.562799043062201,
+            "number": 2
           },
           {
-            "src": "assets/portfolio/concepts-20261010/wine-sketch-3.webp",
+            "src": "assets/portfolio/concepts-fit-20261010/wine-sketch-3.webp",
             "alt": "酒窖手绘 3 号",
-            "number": 3,
-            "softEdge": true
+            "aspect": 0.562799043062201,
+            "number": 3
           },
           {
-            "src": "assets/portfolio/concepts-20261010/wine-sketch-4.webp",
+            "src": "assets/portfolio/concepts-fit-20261010/wine-sketch-4.webp",
             "alt": "酒窖手绘 4 号",
-            "number": 4,
-            "softEdge": true
+            "aspect": 0.562799043062201,
+            "number": 4
           },
           {
-            "src": "assets/portfolio/concepts-20261010/wine-sketch-5.webp",
+            "src": "assets/portfolio/concepts-fit-20261010/wine-sketch-5.webp",
             "alt": "酒窖手绘 5 号",
-            "number": 5,
-            "softEdge": true
+            "aspect": 0.562799043062201,
+            "number": 5
           }
-        ]
+        ],
+        "ratio": 0.562799043062201
+      },
+      {
+        "title": "白模过程",
+        "kind": "images",
+        "category": 4,
+        "images": [
+          {
+            "src": "assets/portfolio/concepts-fit-20261010/wine-clay.webp",
+            "alt": "酒窖雕像白模",
+            "aspect": 0.562799043062201
+          }
+        ],
+        "ratio": 0.562799043062201
+      },
+      {
+        "title": "完成图与白模并排",
+        "kind": "finished-pair",
+        "category": 6,
+        "images": [
+          {
+            "src": "assets/portfolio/concepts-fit-20261010/wine-color.webp",
+            "alt": "酒窖雕像完成图",
+            "aspect": 0.562799043062201
+          },
+          {
+            "src": "assets/portfolio/concepts-fit-20261010/wine-clay.webp",
+            "alt": "酒窖雕像白模",
+            "aspect": 0.562799043062201
+          }
+        ],
+        "ratio": 1.2
       }
     ],
     "disclosure": "完成图含 AI 辅助视觉制作；手绘稿展示作者的构图与绘画过程。"
@@ -84,17 +116,43 @@ window.siteContent = {
   {
     "id": "sci-fi-beach",
     "title": "科幻沙滩",
-    "status": "development",
-    "publishable": false,
-    "stateLabel": "CONCEPT IN DEVELOPMENT",
+    "status": "process",
+    "publishable": true,
+    "stateLabel": "CONCEPT STUDIES",
     "cover": "",
     "alt": "科幻沙滩完成图预留",
     "thesis": "未知星球上的海岸度假居所。",
     "slides": [
       {
-        "kind": "reserved",
-        "title": "完成图",
-        "note": "完成图展示位置预留"
+        "title": "白模版本过程",
+        "kind": "images",
+        "category": 4,
+        "images": [
+          {
+            "src": "assets/portfolio/concepts-fit-20261010/beach-clay-01.webp",
+            "alt": "早期白模过程",
+            "aspect": 1.3977868375072802
+          },
+          {
+            "src": "assets/portfolio/concepts-fit-20261010/beach-clay-13.webp",
+            "alt": "白模版本过程",
+            "aspect": 1.3977868375072802
+          }
+        ],
+        "ratio": 2.5
+      },
+      {
+        "title": "阶段修订过程",
+        "kind": "images",
+        "category": 4,
+        "images": [
+          {
+            "src": "assets/portfolio/concepts-fit-20261010/beach-process-v3-13.webp",
+            "alt": "阶段修订过程",
+            "aspect": 1.3977379830348728
+          }
+        ],
+        "ratio": 1.7777777777777777
       }
     ],
     "disclosure": ""
@@ -108,92 +166,92 @@ window.siteContent = {
     "cover": "",
     "alt": "世外拜访完成图预留",
     "thesis": "沿着峡谷与瀑布，走进一次世外拜访。",
-    "boardBackground": "assets/portfolio/concepts-20261010/visit-background.webp",
+    "boardBackground": "assets/portfolio/concepts-fit-20261010/visit-background.webp",
     "boardTheme": "light",
     "slides": [
       {
-        "title": "最初设定手绘",
+        "title": "手绘探索",
         "kind": "images",
+        "category": 3,
         "images": [
           {
-            "src": "assets/portfolio/concepts-20261010/visit-sketch-top.webp",
+            "src": "assets/portfolio/concepts-fit-20261010/visit-sketch-top.webp",
             "alt": "白蛇手绘俯视",
-            "softEdge": true
+            "aspect": 0.916030534351145
           },
           {
-            "src": "assets/portfolio/concepts-20261010/visit-sketch-side.webp",
+            "src": "assets/portfolio/concepts-fit-20261010/visit-sketch-side.webp",
             "alt": "白蛇手绘侧视",
-            "softEdge": true
+            "aspect": 1.4514889529298751
           }
-        ]
+        ],
+        "ratio": 1.7777777777777777
       },
       {
         "title": "白模造型",
         "kind": "images",
+        "category": 4,
         "images": [
           {
-            "src": "assets/portfolio/concepts-20261010/visit-clay.webp",
+            "src": "assets/portfolio/concepts-fit-20261010/visit-clay.webp",
             "alt": "白蛇白模造型",
-            "softEdge": true
+            "aspect": 1.3792134831460674
           }
-        ]
+        ],
+        "ratio": 1.7777777777777777
       },
       {
         "title": "视觉参考",
         "kind": "references",
-        "note": "参考图片用于呈现灵感来源。",
+        "category": 5,
         "images": [
           {
-            "src": "assets/portfolio/concepts-20261010/visit-ref-01.webp",
-            "alt": "视觉参考 1",
-            "softEdge": false
+            "src": "assets/portfolio/concepts-fit-20261010/visit-ref-01.webp",
+            "alt": "视觉参考",
+            "aspect": 2.1390374331550803
           },
           {
-            "src": "assets/portfolio/concepts-20261010/visit-ref-02.webp",
-            "alt": "视觉参考 2",
-            "softEdge": false
+            "src": "assets/portfolio/concepts-fit-20261010/visit-ref-02.webp",
+            "alt": "视觉参考",
+            "aspect": 1.7777777777777777
           },
           {
-            "src": "assets/portfolio/concepts-20261010/visit-ref-03.webp",
-            "alt": "视觉参考 3",
-            "softEdge": false
+            "src": "assets/portfolio/concepts-fit-20261010/visit-ref-03.webp",
+            "alt": "视觉参考",
+            "aspect": 1.525522041763341
           },
           {
-            "src": "assets/portfolio/concepts-20261010/visit-ref-04.webp",
-            "alt": "视觉参考 4",
-            "softEdge": false
+            "src": "assets/portfolio/concepts-fit-20261010/visit-ref-04.webp",
+            "alt": "视觉参考",
+            "aspect": 1.6797900262467191
           },
           {
-            "src": "assets/portfolio/concepts-20261010/visit-ref-05.webp",
-            "alt": "视觉参考 5",
-            "softEdge": false
+            "src": "assets/portfolio/concepts-fit-20261010/visit-ref-05.webp",
+            "alt": "视觉参考",
+            "aspect": 1.0559610705596107
           },
           {
-            "src": "assets/portfolio/concepts-20261010/visit-ref-06.webp",
-            "alt": "视觉参考 6",
-            "softEdge": false
+            "src": "assets/portfolio/concepts-fit-20261010/visit-ref-06.webp",
+            "alt": "视觉参考",
+            "aspect": 0.9259259259259259
           },
           {
-            "src": "assets/portfolio/concepts-20261010/visit-ref-07.webp",
-            "alt": "视觉参考 7",
-            "softEdge": false
+            "src": "assets/portfolio/concepts-fit-20261010/visit-ref-07.webp",
+            "alt": "视觉参考",
+            "aspect": 0.6391666666666667
           },
           {
-            "src": "assets/portfolio/concepts-20261010/visit-ref-08.webp",
-            "alt": "视觉参考 8",
-            "softEdge": false
+            "src": "assets/portfolio/concepts-fit-20261010/visit-ref-08.webp",
+            "alt": "视觉参考",
+            "aspect": 1.517786561264822
           },
           {
-            "src": "assets/portfolio/concepts-20261010/visit-ref-09.webp",
-            "alt": "视觉参考 9",
-            "softEdge": false
+            "src": "assets/portfolio/concepts-fit-20261010/visit-ref-09.webp",
+            "alt": "视觉参考",
+            "aspect": 2.2966507177033493
           }
-        ]
-      },
-      {
-        "kind": "reserved",
-        "title": "完成图",
-        "note": "完成图展示位置预留"
+        ],
+        "ratio": 1.7777777777777777
       }
     ],
     "disclosure": "手绘与白模为设计过程；参考页图片为灵感参考。"
@@ -207,110 +265,136 @@ window.siteContent = {
     "cover": "",
     "alt": "天体捕食者完成图预留",
     "thesis": "一只穿行于宇宙结构之间的天体捕食者。",
-    "boardBackground": "assets/portfolio/concepts-20261010/xlii-background.webp",
+    "boardBackground": "assets/portfolio/concepts-fit-20261010/xlii-background.webp",
     "boardTheme": "dark",
     "slides": [
       {
         "title": "手绘草稿",
         "kind": "images",
+        "category": 3,
         "images": [
           {
-            "src": "assets/portfolio/concepts-20261010/xlii-sketch.webp",
+            "src": "assets/portfolio/concepts-fit-20261010/xlii-sketch.webp",
             "alt": "手绘草稿",
-            "softEdge": true
+            "aspect": 1.7777777777777777
           }
-        ]
+        ],
+        "ratio": 1.7777777777777777
       },
       {
         "title": "手绘定稿",
         "kind": "images",
+        "category": 3,
         "images": [
           {
-            "src": "assets/portfolio/concepts-20261010/xlii-drawing.webp",
+            "src": "assets/portfolio/concepts-fit-20261010/xlii-drawing.webp",
             "alt": "手绘定稿",
-            "softEdge": true
+            "aspect": 1.7777777777777777
           }
-        ]
+        ],
+        "ratio": 1.7777777777777777
       },
       {
-        "title": "深度过程稿",
-        "kind": "images",
+        "title": "深度与画面过程",
+        "kind": "process-pair",
+        "category": 4,
         "images": [
           {
-            "src": "assets/portfolio/concepts-20261010/xlii-depth.webp",
-            "alt": "深度过程稿",
-            "softEdge": true
+            "src": "assets/portfolio/concepts-fit-20261010/xlii-depth.png",
+            "alt": "深度过程",
+            "aspect": 0.5625
+          },
+          {
+            "src": "assets/portfolio/concepts-fit-20261010/xlii-0086.webp",
+            "alt": "0086 画面过程",
+            "aspect": 0.5625
           }
-        ]
+        ],
+        "ratio": 1.2
       },
       {
         "title": "视觉开发过程",
         "kind": "images",
+        "category": 4,
         "images": [
           {
-            "src": "assets/portfolio/concepts-20261010/xlii-process.webp",
+            "src": "assets/portfolio/concepts-fit-20261010/xlii-process.webp",
             "alt": "视觉开发过程",
-            "softEdge": false
+            "aspect": 1.1064780342516753
           }
-        ]
+        ],
+        "ratio": 1.2
       },
       {
         "title": "视觉参考",
         "kind": "references",
-        "note": "参考图片用于呈现灵感来源。",
+        "category": 5,
         "images": [
           {
-            "src": "assets/portfolio/concepts-20261010/xlii-ref-01.webp",
-            "alt": "视觉参考 1",
-            "softEdge": false
+            "src": "assets/portfolio/concepts-fit-20261010/xlii-ref-01.webp",
+            "alt": "视觉参考",
+            "aspect": 2.2043628013777266
           },
           {
-            "src": "assets/portfolio/concepts-20261010/xlii-ref-02.webp",
-            "alt": "视觉参考 2",
-            "softEdge": false
+            "src": "assets/portfolio/concepts-fit-20261010/xlii-ref-02.webp",
+            "alt": "视觉参考",
+            "aspect": 1.0
           },
           {
-            "src": "assets/portfolio/concepts-20261010/xlii-ref-03.webp",
-            "alt": "视觉参考 3",
-            "softEdge": false
+            "src": "assets/portfolio/concepts-fit-20261010/xlii-ref-03.webp",
+            "alt": "视觉参考",
+            "aspect": 0.7497749774977498
           },
           {
-            "src": "assets/portfolio/concepts-20261010/xlii-ref-05.webp",
-            "alt": "视觉参考 5",
-            "softEdge": false
+            "src": "assets/portfolio/concepts-fit-20261010/xlii-ref-04.webp",
+            "alt": "视觉参考",
+            "aspect": 2.112398609501738
           },
           {
-            "src": "assets/portfolio/concepts-20261010/xlii-ref-06.webp",
-            "alt": "视觉参考 6",
-            "softEdge": false
+            "src": "assets/portfolio/concepts-fit-20261010/xlii-ref-05.webp",
+            "alt": "视觉参考",
+            "aspect": 1.5
           },
           {
-            "src": "assets/portfolio/concepts-20261010/xlii-ref-07.webp",
-            "alt": "视觉参考 7",
-            "softEdge": false
+            "src": "assets/portfolio/concepts-fit-20261010/xlii-ref-07.webp",
+            "alt": "视觉参考",
+            "aspect": 2.112398609501738
           },
           {
-            "src": "assets/portfolio/concepts-20261010/xlii-ref-08.webp",
-            "alt": "视觉参考 8",
-            "softEdge": false
+            "src": "assets/portfolio/concepts-fit-20261010/xlii-ref-08.webp",
+            "alt": "视觉参考",
+            "aspect": 0.5510204081632653
+          },
+          {
+            "src": "assets/portfolio/concepts-fit-20261010/xlii-ref-09.webp",
+            "alt": "视觉参考",
+            "aspect": 1.0185676392572944
+          },
+          {
+            "src": "assets/portfolio/concepts-fit-20261010/xlii-ref-10.webp",
+            "alt": "视觉参考",
+            "aspect": 1.8842001962708539
+          },
+          {
+            "src": "assets/portfolio/concepts-fit-20261010/xlii-ref-11.webp",
+            "alt": "视觉参考",
+            "aspect": 1.9157088122605364
           }
-        ]
+        ],
+        "ratio": 1.7777777777777777
       },
       {
-        "title": "LOL 视觉参考",
+        "title": "LOL视觉参考",
         "kind": "reference-solo",
+        "category": 5,
         "images": [
           {
-            "src": "assets/portfolio/concepts-20261010/xlii-lol-reference-full.webp",
+            "src": "assets/portfolio/concepts-fit-20261010/xlii-ref-06.webp",
             "alt": "LOL 视觉参考拼图",
-            "softEdge": false
+            "aspect": 1.3524783634933124
           }
-        ]
-      },
-      {
-        "kind": "reserved",
-        "title": "完成图",
-        "note": "完成图展示位置预留"
+        ],
+        "ratio": 1.3524783634933124
       }
     ],
     "video": {
