@@ -30,7 +30,8 @@ window.siteContent = {
             "alt": "酒窖雕像完成图",
             "clay": "assets/portfolio/concepts-20261010/wine-clay.webp",
             "aspect": 0.562799043062201,
-            "caption": "完成图 / 白模"
+            "caption": "完成图 / 白模",
+            "softEdge": false
           }
         ]
       },
@@ -42,32 +43,38 @@ window.siteContent = {
           {
             "src": "assets/portfolio/concepts-20261010/wine-sketch-0.webp",
             "alt": "酒窖手绘 0 号",
-            "number": 0
+            "number": 0,
+            "softEdge": true
           },
           {
             "src": "assets/portfolio/concepts-20261010/wine-sketch-1.webp",
             "alt": "酒窖手绘 1 号",
-            "number": 1
+            "number": 1,
+            "softEdge": true
           },
           {
             "src": "assets/portfolio/concepts-20261010/wine-sketch-2.webp",
             "alt": "酒窖手绘 2 号",
-            "number": 2
+            "number": 2,
+            "softEdge": true
           },
           {
             "src": "assets/portfolio/concepts-20261010/wine-sketch-3.webp",
             "alt": "酒窖手绘 3 号",
-            "number": 3
+            "number": 3,
+            "softEdge": true
           },
           {
             "src": "assets/portfolio/concepts-20261010/wine-sketch-4.webp",
             "alt": "酒窖手绘 4 号",
-            "number": 4
+            "number": 4,
+            "softEdge": true
           },
           {
             "src": "assets/portfolio/concepts-20261010/wine-sketch-5.webp",
             "alt": "酒窖手绘 5 号",
-            "number": 5
+            "number": 5,
+            "softEdge": true
           }
         ]
       }
@@ -105,21 +112,18 @@ window.siteContent = {
     "boardTheme": "light",
     "slides": [
       {
-        "kind": "reserved",
-        "title": "完成图",
-        "note": "完成图展示位置预留"
-      },
-      {
         "title": "最初设定手绘",
         "kind": "images",
         "images": [
           {
             "src": "assets/portfolio/concepts-20261010/visit-sketch-top.webp",
-            "alt": "白蛇手绘俯视"
+            "alt": "白蛇手绘俯视",
+            "softEdge": true
           },
           {
             "src": "assets/portfolio/concepts-20261010/visit-sketch-side.webp",
-            "alt": "白蛇手绘侧视"
+            "alt": "白蛇手绘侧视",
+            "softEdge": true
           }
         ]
       },
@@ -129,7 +133,8 @@ window.siteContent = {
         "images": [
           {
             "src": "assets/portfolio/concepts-20261010/visit-clay.webp",
-            "alt": "白蛇白模造型"
+            "alt": "白蛇白模造型",
+            "softEdge": true
           }
         ]
       },
@@ -140,41 +145,55 @@ window.siteContent = {
         "images": [
           {
             "src": "assets/portfolio/concepts-20261010/visit-ref-01.webp",
-            "alt": "视觉参考 1"
+            "alt": "视觉参考 1",
+            "softEdge": false
           },
           {
             "src": "assets/portfolio/concepts-20261010/visit-ref-02.webp",
-            "alt": "视觉参考 2"
+            "alt": "视觉参考 2",
+            "softEdge": false
           },
           {
             "src": "assets/portfolio/concepts-20261010/visit-ref-03.webp",
-            "alt": "视觉参考 3"
+            "alt": "视觉参考 3",
+            "softEdge": false
           },
           {
             "src": "assets/portfolio/concepts-20261010/visit-ref-04.webp",
-            "alt": "视觉参考 4"
+            "alt": "视觉参考 4",
+            "softEdge": false
           },
           {
             "src": "assets/portfolio/concepts-20261010/visit-ref-05.webp",
-            "alt": "视觉参考 5"
+            "alt": "视觉参考 5",
+            "softEdge": false
           },
           {
             "src": "assets/portfolio/concepts-20261010/visit-ref-06.webp",
-            "alt": "视觉参考 6"
+            "alt": "视觉参考 6",
+            "softEdge": false
           },
           {
             "src": "assets/portfolio/concepts-20261010/visit-ref-07.webp",
-            "alt": "视觉参考 7"
+            "alt": "视觉参考 7",
+            "softEdge": false
           },
           {
             "src": "assets/portfolio/concepts-20261010/visit-ref-08.webp",
-            "alt": "视觉参考 8"
+            "alt": "视觉参考 8",
+            "softEdge": false
           },
           {
             "src": "assets/portfolio/concepts-20261010/visit-ref-09.webp",
-            "alt": "视觉参考 9"
+            "alt": "视觉参考 9",
+            "softEdge": false
           }
         ]
+      },
+      {
+        "kind": "reserved",
+        "title": "完成图",
+        "note": "完成图展示位置预留"
       }
     ],
     "disclosure": "手绘与白模为设计过程；参考页图片为灵感参考。"
@@ -192,56 +211,13 @@ window.siteContent = {
     "boardTheme": "dark",
     "slides": [
       {
-        "kind": "reserved",
-        "title": "完成图",
-        "note": "完成图展示位置预留"
-      },
-      {
-        "title": "视觉参考",
-        "kind": "references",
-        "note": "参考图片用于呈现灵感来源。",
-        "images": [
-          {
-            "src": "assets/portfolio/concepts-20261010/xlii-ref-01.webp",
-            "alt": "视觉参考 1"
-          },
-          {
-            "src": "assets/portfolio/concepts-20261010/xlii-ref-02.webp",
-            "alt": "视觉参考 2"
-          },
-          {
-            "src": "assets/portfolio/concepts-20261010/xlii-ref-03.webp",
-            "alt": "视觉参考 3"
-          },
-          {
-            "src": "assets/portfolio/concepts-20261010/xlii-ref-04.webp",
-            "alt": "视觉参考 4"
-          },
-          {
-            "src": "assets/portfolio/concepts-20261010/xlii-ref-05.webp",
-            "alt": "视觉参考 5"
-          },
-          {
-            "src": "assets/portfolio/concepts-20261010/xlii-ref-06.webp",
-            "alt": "视觉参考 6"
-          },
-          {
-            "src": "assets/portfolio/concepts-20261010/xlii-ref-07.webp",
-            "alt": "视觉参考 7"
-          },
-          {
-            "src": "assets/portfolio/concepts-20261010/xlii-ref-08.webp",
-            "alt": "视觉参考 8"
-          }
-        ]
-      },
-      {
         "title": "手绘草稿",
         "kind": "images",
         "images": [
           {
             "src": "assets/portfolio/concepts-20261010/xlii-sketch.webp",
-            "alt": "手绘草稿"
+            "alt": "手绘草稿",
+            "softEdge": true
           }
         ]
       },
@@ -251,7 +227,8 @@ window.siteContent = {
         "images": [
           {
             "src": "assets/portfolio/concepts-20261010/xlii-drawing.webp",
-            "alt": "手绘定稿"
+            "alt": "手绘定稿",
+            "softEdge": true
           }
         ]
       },
@@ -261,7 +238,8 @@ window.siteContent = {
         "images": [
           {
             "src": "assets/portfolio/concepts-20261010/xlii-depth.webp",
-            "alt": "深度过程稿"
+            "alt": "深度过程稿",
+            "softEdge": true
           }
         ]
       },
@@ -271,9 +249,68 @@ window.siteContent = {
         "images": [
           {
             "src": "assets/portfolio/concepts-20261010/xlii-process.webp",
-            "alt": "视觉开发过程"
+            "alt": "视觉开发过程",
+            "softEdge": false
           }
         ]
+      },
+      {
+        "title": "视觉参考",
+        "kind": "references",
+        "note": "参考图片用于呈现灵感来源。",
+        "images": [
+          {
+            "src": "assets/portfolio/concepts-20261010/xlii-ref-01.webp",
+            "alt": "视觉参考 1",
+            "softEdge": false
+          },
+          {
+            "src": "assets/portfolio/concepts-20261010/xlii-ref-02.webp",
+            "alt": "视觉参考 2",
+            "softEdge": false
+          },
+          {
+            "src": "assets/portfolio/concepts-20261010/xlii-ref-03.webp",
+            "alt": "视觉参考 3",
+            "softEdge": false
+          },
+          {
+            "src": "assets/portfolio/concepts-20261010/xlii-ref-05.webp",
+            "alt": "视觉参考 5",
+            "softEdge": false
+          },
+          {
+            "src": "assets/portfolio/concepts-20261010/xlii-ref-06.webp",
+            "alt": "视觉参考 6",
+            "softEdge": false
+          },
+          {
+            "src": "assets/portfolio/concepts-20261010/xlii-ref-07.webp",
+            "alt": "视觉参考 7",
+            "softEdge": false
+          },
+          {
+            "src": "assets/portfolio/concepts-20261010/xlii-ref-08.webp",
+            "alt": "视觉参考 8",
+            "softEdge": false
+          }
+        ]
+      },
+      {
+        "title": "LOL 视觉参考",
+        "kind": "reference-solo",
+        "images": [
+          {
+            "src": "assets/portfolio/concepts-20261010/xlii-lol-reference-full.webp",
+            "alt": "LOL 视觉参考拼图",
+            "softEdge": false
+          }
+        ]
+      },
+      {
+        "kind": "reserved",
+        "title": "完成图",
+        "note": "完成图展示位置预留"
       }
     ],
     "video": {

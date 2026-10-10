@@ -35,22 +35,16 @@
     </figure>`;
   }
 
-  function conceptDeck(project) {
-    const slides = project.slides;
-    return `<section class="concept-deck" aria-label="${escapeHtml(project.title)}概念展板">
-      <div class="concept-board ${project.boardTheme === 'light' ? 'board-light' : 'board-dark'}" ${project.boardBackground ? `style="--board-background:url('${asset(project.boardBackground)}')"` : ''}>
-        ${slides.map((slide, index) => `<article class="concept-slide slide-${escapeHtml(slide.kind)}" ${index ? 'hidden' : ''} data-slide="${index}" aria-label="${escapeHtml(slide.title)}">
-          <header class="slide-heading"><div><small>${escapeHtml(project.title)} / CONCEPT DESIGN</small><h2>${escapeHtml(slide.title)}</h2></div><span>${String(index + 1).padStart(2,'0')} / ${String(slides.length).padStart(2,'0')}</span></header>
-          <div class="slide-content ${slide.kind === 'references' ? `reference-grid references-${slide.images.length}` : ''}">
-          ${slide.kind === 'reserved' ? '<div class="concept-reserved"><span>完成图</span><p>展示位置预留</p></div>'
-            : slide.kind === 'compare' ? galleryFigure(slide.images[0])
-            : slide.kind === 'sequence' ? `<div class="drawing-sequence"><div class="drawing-stage">${slide.images.map((item, n) => `<img src="${asset(item.src)}" alt="${escapeHtml(item.alt)}" class="drawing-frame ${n === 0 ? 'is-active' : ''}" ${n ? 'aria-hidden="true"' : ''}>`).join('')}</div><div class="drawing-controls"><span class="drawing-status">0 / 5</span><p>手绘过程</p><div class="drawing-steps">${slide.images.map((item,n) => `<button type="button" data-drawing-frame="${n}" aria-label="查看 ${n} 号手绘" aria-pressed="${n===0}">${n}</button>`).join('')}</div><button type="button" class="drawing-pause" aria-pressed="false">暂停播放</button></div></div>`
-            : slide.images.map((item,n) => `<a class="board-image" href="${asset(item.src)}" target="_blank" rel="noopener" aria-label="放大查看：${escapeHtml(item.alt)}"><img src="${asset(item.src)}" alt="${escapeHtml(item.alt)}" loading="lazy"><span>${slide.kind === 'references' ? String(n+1).padStart(2,'0') : escapeHtml(item.alt)}</span></a>`).join('')}
-          </div><footer class="slide-foot"><span>${escapeHtml(slide.note || (slide.kind === 'compare' ? '移动鼠标或点击按钮，查看白模' : slide.kind === 'reserved' ? '' : '点击图片可放大查看'))}</span><span>YUYIYU</span></footer>
-        </article>`).join('')}
-      </div>
-      <div class="deck-controls"><button type="button" data-deck-prev aria-label="上一张展板" disabled>←</button><div class="deck-pages">${slides.map((slide,index) => `<button type="button" data-deck-page="${index}" aria-label="查看${escapeHtml(slide.title)}" aria-pressed="${index===0}">${String(index+1).padStart(2,'0')} <span>${escapeHtml(slide.title)}</span></button>`).join('')}</div><button type="button" data-deck-next aria-label="下一张展板" ${slides.length===1 ? 'disabled' : ''}>→</button></div>
-      <p class="deck-status" aria-live="polite">1 / ${slides.length} · ${escapeHtml(slides[0].title)}</p>
+  function conceptPages(project) {
+    return `<section class="concept-scroll ${project.boardTheme === 'light' ? 'board-light' : 'board-dark'}" aria-label="${escapeHtml(project.title)}作品" ${project.boardBackground ? `style="--board-background:url('${asset(project.boardBackground)}')"` : ''}>
+      ${project.slides.map((sheet,index) => `<article class="concept-sheet sheet-${escapeHtml(sheet.kind)} ${sheet.kind === 'images' && sheet.images[0].src.includes('depth') ? 'sheet-portrait' : ''}" data-sheet="${index}" aria-label="${escapeHtml(sheet.title)}">
+        <div class="sheet-art ${sheet.kind === 'references' ? `reference-mosaic mosaic-${sheet.images.length}` : ''}">
+        ${sheet.kind === 'reserved' ? '<div class="empty-art-slot" aria-label="完成图预留"></div>'
+          : sheet.kind === 'compare' ? `<figure class="gallery-image gallery-image-compare" data-clay-reveal><div class="gallery-compare-frame" style="--image-ratio:${sheet.images[0].aspect}"><img src="${asset(sheet.images[0].src)}" alt="${escapeHtml(sheet.images[0].alt)}" loading="lazy"><img class="gallery-clay" src="${asset(sheet.images[0].clay)}" alt="" aria-hidden="true" loading="lazy"></div><button type="button" class="gallery-reveal-toggle art-control" data-icon-toggle aria-label="查看白模" aria-pressed="false">◐</button></figure>`
+          : sheet.kind === 'sequence' ? `<div class="drawing-sequence"><div class="drawing-stage soft-edge">${sheet.images.map((item,n)=>`<img src="${asset(item.src)}" alt="${escapeHtml(item.alt)}" class="drawing-frame ${n===0?'is-active':''}" aria-hidden="${n!==0}" loading="lazy">`).join('')}</div><button type="button" class="drawing-pause art-control" aria-label="暂停播放" aria-pressed="false">Ⅱ</button></div>`
+          : sheet.images.map(item=>`<a class="sheet-image ${item.softEdge?'soft-edge':''}" href="${asset(item.src)}" target="_blank" rel="noopener" aria-label="放大查看：${escapeHtml(item.alt)}"><img src="${asset(item.src)}" alt="${escapeHtml(item.alt)}" loading="lazy"></a>`).join('')}
+        </div>
+      </article>`).join('')}
     </section>`;
   }
 
@@ -123,6 +117,7 @@
   }
 
   function detail(project) {
+    if (project.slides) return `${sidebar()}<main id="main-content" class="main-shell concept-detail"><header class="concept-page-header"><a href="index.html" aria-label="返回作品首页">←</a><h1>${escapeHtml(project.title)}</h1></header>${conceptPages(project)}<footer class="site-footer"><span>YUYIYU</span>${contactLink()}</footer></main>`;
     const isSketch = sketches.includes(project);
     const isCollection = collections.includes(project);
     const currentIndex = worlds.indexOf(project);
@@ -138,7 +133,7 @@
       <div class="detail-body">
         <div class="detail-intro"><span>ABOUT THE CONCEPT</span><p>${escapeHtml(description)}</p></div>
         <div class="gallery-head"><h2>${project.videos ? '视频作品' : project.slides ? '概念设计展板' : '画面与过程'}</h2><span>${project.slides ? '点击页码或箭头，查看设计过程' : project.videos ? '选择作品，前往 B 站观看' : project.gallery?.some((item) => item.clay) ? '左右移动鼠标，查看灰模或白膜参考' : isCollection ? '当前选图 + 后续可扩展位置' : isSketch && project.gallery?.length ? '已确认的成品画面' : '现有画面 + 后续可扩展位置'}</span></div>
-        ${project.slides ? conceptDeck(project) : project.videos ? `<div class="video-gallery" id="video-gallery">${videoCards(project.videos, 0)}</div><div class="video-pager" aria-label="视频作品翻页"><span id="video-page-status" aria-live="polite">01 / ${String(Math.ceil(project.videos.length / 3)).padStart(2, '0')}</span><button type="button" data-video-page="previous" aria-label="上一页视频" disabled>←</button><button type="button" data-video-page="next" aria-label="下一页视频">→</button></div>` : `<div class="gallery-stack${project.id === 'stylized' ? ' stylized-gallery' : ''}">
+        ${project.videos ? `<div class="video-gallery" id="video-gallery">${videoCards(project.videos, 0)}</div><div class="video-pager" aria-label="视频作品翻页"><span id="video-page-status" aria-live="polite">01 / ${String(Math.ceil(project.videos.length / 3)).padStart(2, '0')}</span><button type="button" data-video-page="previous" aria-label="上一页视频" disabled>←</button><button type="button" data-video-page="next" aria-label="下一页视频">→</button></div>` : `<div class="gallery-stack${project.id === 'stylized' ? ' stylized-gallery' : ''}">
           ${project.gallery ? project.gallery.map(galleryFigure).join('')
             : project.cover ? `<figure class="gallery-image ${project.galleryLayout === 'portrait' ? 'is-portrait' : ''}"><img src="${asset(project.cover)}" alt="${escapeHtml(project.alt || project.title)}"><figcaption>${label(project)} · ${escapeHtml(project.disclosure || '')}</figcaption></figure>`
               : `<div class="gallery-reserved"><span>01 / IMAGE RESERVED</span><p>这一画面尚未选定，保留原位。</p></div>`}
@@ -200,63 +195,37 @@
       figure.classList.remove('is-returning');
       show(pinned ? 100 : 0);
       button.setAttribute('aria-pressed', String(pinned));
-      button.textContent = pinned ? '查看渲染图' : '查看灰模';
+      if (button.hasAttribute('data-icon-toggle')) button.setAttribute('aria-label', pinned ? '查看完成图' : '查看白模');
+      else button.textContent = pinned ? '查看渲染图' : '查看灰模';
     });
   });
 
-  if (selectedProject?.slides && document.querySelectorAll('.concept-deck').length) {
-    const deck = document.querySelector('.concept-deck');
-    const slides = [...deck.querySelectorAll('[data-slide]')];
-    const pages = [...deck.querySelectorAll('[data-deck-page]')];
-    const previous = deck.querySelector('[data-deck-prev]');
-    const next = deck.querySelector('[data-deck-next]');
-    let current = 0;
-    const sequence = deck.querySelector('.drawing-sequence');
+  if (selectedProject?.slides && document.querySelectorAll('.drawing-sequence').length) {
+    const sequence = document.querySelector('.drawing-sequence');
+    const frames = [...sequence.querySelectorAll('.drawing-frame')];
+    const pause = sequence.querySelector('.drawing-pause');
     const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
-    let frameIndex = 0, timer, inView = false, paused = motion.matches;
-    const frames = sequence ? [...sequence.querySelectorAll('.drawing-frame')] : [];
-    const frameButtons = sequence ? [...sequence.querySelectorAll('[data-drawing-frame]')] : [];
-    const pause = sequence?.querySelector('.drawing-pause');
-    const showFrame = (index) => {
-      frameIndex = index;
-      frames.forEach((frame,n) => { frame.classList.toggle('is-active', n===index); frame.setAttribute('aria-hidden',String(n!==index)); });
-      frameButtons.forEach((button,n) => button.setAttribute('aria-pressed',String(n===index)));
-      sequence.querySelector('.drawing-status').textContent = `${index} / 5`;
-    };
+    let index = 0, timer, inView = false, hovering = false, paused = motion.matches;
     const schedule = () => {
       clearTimeout(timer);
-      if (!sequence || paused || document.hidden || !inView || sequence.closest('[data-slide]').hidden) return;
+      if (paused || hovering || document.hidden || !inView) return;
       timer = setTimeout(async () => {
-        const index = (frameIndex+1)%frames.length;
-        try { await frames[index].decode(); } catch { return; }
-        if (paused || document.hidden || !inView || sequence.closest('[data-slide]').hidden) return;
-        showFrame(index); schedule();
-      }, frameIndex === 5 ? 2800 : 1400);
+        const next = (index+1)%frames.length;
+        try { await frames[next].decode(); } catch { return; }
+        if (paused || hovering || document.hidden || !inView) return;
+        index=next;
+        frames.forEach((frame,n)=>{frame.classList.toggle('is-active',n===index);frame.setAttribute('aria-hidden',String(n!==index));});
+        schedule();
+      },index===5?2800:1400);
     };
-    const updatePause = () => { if (pause) { pause.textContent=paused?'播放过程':'暂停播放'; pause.setAttribute('aria-pressed',String(paused)); } };
-    const showSlide = (index) => {
-      current = Math.max(0,Math.min(slides.length-1,index));
-      slides.forEach((slide,n)=>{ slide.hidden=n!==current; });
-      pages.forEach((button,n)=>button.setAttribute('aria-pressed',String(n===current)));
-      previous.disabled=current===0; next.disabled=current===slides.length-1;
-      deck.querySelector('.deck-status').textContent=`${current+1} / ${slides.length} · ${selectedProject.slides[current].title}`;
-      schedule();
-    };
-    pages.forEach((button,index)=>button.addEventListener('click',()=>showSlide(index)));
-    previous.addEventListener('click',()=>showSlide(current-1));
-    next.addEventListener('click',()=>showSlide(current+1));
-    deck.addEventListener('keydown',event=>{
-      if (event.target.closest('.drawing-controls')) return;
-      if (event.key==='ArrowLeft' || event.key==='ArrowRight') { event.preventDefault(); showSlide(current+(event.key==='ArrowRight'?1:-1)); }
-    });
-    if (sequence) {
-      frameButtons.forEach((button,index)=>button.addEventListener('click',()=>{ paused=true;showFrame(index);updatePause();schedule(); }));
-      pause.addEventListener('click',()=>{ paused=!paused;updatePause();schedule(); });
-      document.addEventListener('visibilitychange',schedule);
-      motion.addEventListener('change',()=>{ if (motion.matches) { paused=true;updatePause();schedule(); } });
-      new IntersectionObserver(entries=>{inView=entries[0].isIntersecting;schedule();},{threshold:0.2}).observe(deck);
-      updatePause();
-    }
+    const updatePause=()=>{pause.textContent=paused?'▶':'Ⅱ';pause.setAttribute('aria-label',paused?'播放过程':'暂停播放');pause.setAttribute('aria-pressed',String(paused));};
+    pause.addEventListener('click',()=>{paused=!paused;updatePause();schedule();});
+    sequence.addEventListener('pointerenter',event=>{if(event.pointerType==='mouse'){hovering=true;schedule();}});
+    sequence.addEventListener('pointerleave',()=>{hovering=false;schedule();});
+    document.addEventListener('visibilitychange',schedule);
+    motion.addEventListener('change',()=>{if(motion.matches){paused=true;updatePause();schedule();}});
+    new IntersectionObserver(entries=>{inView=entries[0].isIntersecting;schedule();},{threshold:0.2}).observe(sequence);
+    updatePause();
   }
 
   if (selectedProject?.videos && document.querySelectorAll('[data-video-page]').length === 2) {

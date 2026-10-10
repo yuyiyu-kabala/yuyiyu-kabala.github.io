@@ -139,71 +139,45 @@ img { display: block; max-width: 100%; }
 .gallery-head { display: flex; justify-content: space-between; gap: 20px; align-items: baseline; margin: 0 0 18px; border-top: 1px solid var(--line); padding-top: 30px; }
 .gallery-head h2 { margin: 0; font-size: 23px; font-weight: 500; }
 .gallery-stack { display: grid; gap: 18px; }
-.concept-board { aspect-ratio: 16 / 9; position: relative; background: #17212b var(--board-background, none) center / cover; color: #edf0f4; overflow: hidden; border: 1px solid var(--line); }
-.board-light { color: #283c3b; background-color: #dde5e2; }
-.concept-slide { position: absolute; inset: 0; padding: 3% 4% 2%; display: flex; flex-direction: column; background: rgba(10,17,25,.16); }
-.board-light .concept-slide { background: rgba(245,247,243,.14); }
-.concept-slide[hidden] { display: none; }
-.slide-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; flex: 0 0 16%; }
-.slide-heading small, .slide-heading > span { font: clamp(8px, .85vw, 12px) Georgia, serif; letter-spacing: .12em; }
-.slide-heading h2 { font-size: clamp(14px, 2vw, 28px); margin: 7px 0 0; font-weight: 500; }
-.slide-content { flex: 1; min-height: 0; display: flex; justify-content: center; align-items: stretch; gap: 3%; padding: 1% 0; }
-.slide-foot { flex: 0 0 7%; display: flex; align-items: flex-end; justify-content: space-between; gap: 8px; font-size: clamp(8px, .9vw, 12px); opacity: .8; }
-.board-image { min-width: 0; min-height: 0; flex: 1; display: flex; flex-direction: column; align-items: center; gap: 5px; }
-.board-image img { min-height: 0; width: 100%; flex: 1; object-fit: contain; }
-.board-image span { font-size: clamp(8px, .85vw, 12px); }
-.reference-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); grid-template-rows: repeat(2,minmax(0,1fr)); gap: 3% 2%; }
-.references-9 { grid-template-columns: repeat(3,minmax(0,1fr)); grid-template-rows: repeat(3,minmax(0,1fr)); }
-.reference-grid .board-image { position: relative; padding: 5px; background: rgba(10,17,25,.18); border: 1px solid rgba(255,255,255,.12); }
-.board-light .reference-grid .board-image { background: rgba(244,247,244,.6); border-color: rgba(40,60,59,.12); }
-.reference-grid .board-image span { position: absolute; bottom: 5px; left: 5px; font-size: 9px; padding: 2px 4px; background: rgba(10,17,25,.7); color: #fff; }
-.concept-reserved { align-self: center; text-align: center; width: 70%; padding: 9% 0; border: 1px dashed currentColor; opacity: .6; }
-.concept-reserved span { font-size: clamp(16px,2.3vw,32px); letter-spacing: .16em; }
-.concept-reserved p { font-size: clamp(9px,1vw,14px); margin: 12px 0 0; }
-.slide-compare .gallery-image { height: 100%; display: flex; flex-direction: column; align-items: center; }
-.slide-compare .gallery-compare-frame { height: calc(100% - 28px); width: auto; flex: 1; min-height: 0; aspect-ratio: var(--image-ratio); background: transparent; }
-.slide-compare .gallery-compare-frame img { height: 100%; width: 100%; object-fit: contain; }
-.slide-compare .gallery-image figcaption { font-size: clamp(8px,.85vw,12px); gap: 8px; padding: 4px 0 0; color: inherit; }
-.slide-compare .gallery-reveal-toggle { padding: 3px 8px; font-size: inherit; color: inherit; background: rgba(245,247,243,.65); border-color: currentColor; }
-.drawing-sequence { display: flex; height: 100%; gap: 6%; width: 100%; justify-content: center; align-items: center; }
-.drawing-stage { position: relative; height: 100%; aspect-ratio: 941 / 1672; }
+/* Continuous portfolio sheets: artwork, no slide controls or captions. */
+.concept-detail { padding: 0 5vw 0; }
+.concept-page-header { display: flex; gap: 22px; align-items: center; padding: 28px 0; }
+.concept-page-header h1 { margin: 0; font-size: 20px; font-weight: 400; }
+.concept-page-header a { font-size: 22px; }
+.concept-scroll { color: #edf0f4; }
+.concept-sheet { aspect-ratio: 16 / 9; position: relative; background: #17212b var(--board-background, none) center / cover; }
+.board-light { color: #283c3b; }
+.board-light .concept-sheet { background-color: #dde5e2; }
+.sheet-art { position: absolute; inset: 6%; display: flex; gap: 4%; align-items: stretch; justify-content: center; }
+.sheet-image { flex: 1; min-width: 0; min-height: 0; display: flex; align-items: center; justify-content: center; }
+.sheet-image img { width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: contain; }
+.reference-mosaic { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); grid-template-rows: repeat(2,minmax(0,1fr)); gap: 4% 3%; }
+.mosaic-9 { grid-template-columns: repeat(3,minmax(0,1fr)); grid-template-rows: repeat(3,minmax(0,1fr)); }
+.sheet-reference-solo { aspect-ratio: 4 / 3; }
+.sheet-reference-solo .sheet-art { inset: 5%; }
+.sheet-portrait { aspect-ratio: 3 / 4; }
+.sheet-compare, .sheet-sequence { aspect-ratio: 3 / 4; }
+.sheet-compare .sheet-art, .sheet-sequence .sheet-art { inset: 5% 12%; }
+.sheet-compare .gallery-image { position: relative; height: 100%; width: 100%; }
+.sheet-compare .gallery-compare-frame { width: 100%; height: 100%; max-height: none; aspect-ratio: auto; background: transparent; }
+.sheet-compare .gallery-compare-frame img { width: 100%; height: 100%; object-fit: contain; }
+.art-control { position: absolute; right: 10px; bottom: 10px; border: 1px solid rgba(255,255,255,.3); background: rgba(12,25,30,.7); color: #fff; width: 38px; height: 38px; padding: 0; font-size: 18px; cursor: pointer; opacity: .5; }
+.art-control:hover, .art-control:focus-visible { opacity: 1; }
+.drawing-sequence { position: relative; width: 100%; height: 100%; }
+.drawing-stage { position: absolute; inset: 0; }
 .drawing-frame { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity .3s ease; }
 .drawing-frame.is-active { opacity: 1; }
-.drawing-controls { width: 25%; }
-.drawing-status { font: clamp(22px,4vw,56px) Georgia,serif; }
-.drawing-controls p { font-size: clamp(10px,1.3vw,18px); margin: 8px 0 20px; }
-.drawing-steps { display: grid; grid-template-columns: repeat(3,1fr); gap: 8px; }
-.drawing-steps button, .drawing-pause { border: 1px solid currentColor; color: inherit; background: rgba(245,247,243,.35); padding: 8px; cursor: pointer; }
-.drawing-steps button[aria-pressed="true"] { background: #405950; color: #fff; }
-.drawing-pause { width: 100%; margin-top: 12px; }
-.deck-controls { display: flex; align-items: center; gap: 12px; margin-top: 18px; }
-.deck-controls > button { flex: 0 0 42px; height: 42px; background: #172730; color: var(--ink); border: 1px solid var(--line); cursor: pointer; }
-.deck-controls > button:disabled { opacity: .3; cursor: default; }
-.deck-pages { display: flex; flex: 1; flex-wrap: wrap; gap: 8px; }
-.deck-pages button { padding: 8px 12px; border: 1px solid var(--line); color: var(--muted); background: transparent; cursor: pointer; font-size: 12px; }
-.deck-pages button[aria-pressed="true"] { border-color: var(--accent); color: var(--ink); background: #203843; }
-.deck-pages button span { margin-left: 5px; }
-.deck-status { margin: 12px 0 0; font-size: 12px; color: var(--muted); }
+.soft-edge { mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent), linear-gradient(to bottom, transparent, #000 12%, #000 88%, transparent); mask-composite: intersect; }
+.sheet-image.soft-edge { mask-image: none; }
+.sheet-image.soft-edge img { mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent), linear-gradient(to bottom, transparent, #000 10%, #000 90%, transparent); mask-composite: intersect; }
+.sheet-reserved { aspect-ratio: auto; height: 20vh; opacity: .5; }
+.empty-art-slot { width: 100%; height: 100%; }
 @media (max-width: 600px) {
-  .concept-slide { padding: 3%; }
-  .slide-heading h2 { margin-top: 3px; font-size: 14px; }
-  .slide-heading small, .slide-heading > span { font-size: 7px; letter-spacing: .03em; }
-  .slide-heading { flex-basis: 20%; }
-  .slide-foot { font-size: 7px; }
-  .board-image span { font-size: 7px; }
-  .reference-grid .board-image { padding: 2px; }
-  .reference-grid .board-image span { font-size: 6px; bottom: 2px; left: 2px; }
-  .deck-controls { gap: 6px; }
-  .deck-controls > button { flex-basis: 32px; height: 36px; }
-  .deck-pages { gap: 4px; }
-  .deck-pages button { padding: 8px; font-size: 11px; }
-  .deck-pages button span { display: none; }
-  .drawing-controls { width: 33%; }
-  .drawing-controls p { margin: 3px 0 5px; }
-  .drawing-steps { gap: 3px; }
-  .drawing-steps button, .drawing-pause { padding: 3px; font-size: 9px; }
-  .drawing-pause { margin-top: 5px; }
-  .slide-compare .gallery-compare-frame { height: calc(100% - 22px); }
+  .concept-detail { padding: 0; }
+  .concept-page-header { padding: 20px; }
+  .concept-page-header h1 { font-size: 18px; }
+  .sheet-art { inset: 5%; gap: 3%; }
+  .art-control { width: 32px; height: 32px; right: 5px; bottom: 5px; }
 }
 .video-gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-bottom: 14px; }
 .video-card { display: block; min-width: 0; border: 1px solid var(--line); background: #172730; transition: border-color .25s ease, transform .25s ease; }
