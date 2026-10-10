@@ -9,36 +9,281 @@ window.siteContent = {
     tags: ['概念设计', '三维视觉', 'AI 辅助开发']
   },
   worlds: [
-    {
-      id: 'wine-cellar-statue', title: '酒窖雕像', status: 'candidate', publishable: false,
-      stateLabel: 'CANDIDATE / NOT A FINAL RENDER', cover: 'assets/portfolio/wine-cellar.png', alt: '酒窖雕像的 AI 辅助候选视觉图', galleryLayout: 'portrait',
-      thesis: '一尊雕像，唤醒被时间封存的地下酒窖。',
-      evidence: ['V1 白膜结构对齐候选', '白膜材质与雕像高度候选', 'AI 辅助 PNG 对齐记录'],
-      disclosure: '候选基于 PNG 的辅助可视化，不是可编辑 Blender 几何，也不是最终渲染。'
+  {
+    "id": "wine-cellar-statue",
+    "title": "酒窖雕像",
+    "status": "approved",
+    "publishable": true,
+    "stateLabel": "SELECTED CONCEPT",
+    "cover": "assets/portfolio/concepts-20261010/wine-color.webp",
+    "alt": "酒窖雕像完成图",
+    "thesis": "一尊雕像，唤醒被时间封存的地下酒窖。",
+    "boardBackground": "assets/portfolio/concepts-20261010/wine-background.webp",
+    "boardTheme": "light",
+    "slides": [
+      {
+        "title": "完成图与白模",
+        "kind": "compare",
+        "images": [
+          {
+            "src": "assets/portfolio/concepts-20261010/wine-color.webp",
+            "alt": "酒窖雕像完成图",
+            "clay": "assets/portfolio/concepts-20261010/wine-clay.webp",
+            "aspect": 0.562799043062201,
+            "caption": "完成图 / 白模"
+          }
+        ]
+      },
+      {
+        "title": "手绘过程",
+        "kind": "sequence",
+        "note": "从 0 号到 5 号，逐步展开画面。",
+        "images": [
+          {
+            "src": "assets/portfolio/concepts-20261010/wine-sketch-0.webp",
+            "alt": "酒窖手绘 0 号",
+            "number": 0
+          },
+          {
+            "src": "assets/portfolio/concepts-20261010/wine-sketch-1.webp",
+            "alt": "酒窖手绘 1 号",
+            "number": 1
+          },
+          {
+            "src": "assets/portfolio/concepts-20261010/wine-sketch-2.webp",
+            "alt": "酒窖手绘 2 号",
+            "number": 2
+          },
+          {
+            "src": "assets/portfolio/concepts-20261010/wine-sketch-3.webp",
+            "alt": "酒窖手绘 3 号",
+            "number": 3
+          },
+          {
+            "src": "assets/portfolio/concepts-20261010/wine-sketch-4.webp",
+            "alt": "酒窖手绘 4 号",
+            "number": 4
+          },
+          {
+            "src": "assets/portfolio/concepts-20261010/wine-sketch-5.webp",
+            "alt": "酒窖手绘 5 号",
+            "number": 5
+          }
+        ]
+      }
+    ],
+    "disclosure": "完成图含 AI 辅助视觉制作；手绘稿展示作者的构图与绘画过程。"
+  },
+  {
+    "id": "sci-fi-beach",
+    "title": "科幻沙滩",
+    "status": "development",
+    "publishable": false,
+    "stateLabel": "CONCEPT IN DEVELOPMENT",
+    "cover": "",
+    "alt": "科幻沙滩完成图预留",
+    "thesis": "未知星球上的海岸度假居所。",
+    "slides": [
+      {
+        "kind": "reserved",
+        "title": "完成图",
+        "note": "完成图展示位置预留"
+      }
+    ],
+    "disclosure": ""
+  },
+  {
+    "id": "shiwai-visit",
+    "title": "世外拜访",
+    "status": "process",
+    "publishable": true,
+    "stateLabel": "CONCEPT STUDIES",
+    "cover": "",
+    "alt": "世外拜访完成图预留",
+    "thesis": "沿着峡谷与瀑布，走进一次世外拜访。",
+    "boardBackground": "assets/portfolio/concepts-20261010/visit-background.webp",
+    "boardTheme": "light",
+    "slides": [
+      {
+        "kind": "reserved",
+        "title": "完成图",
+        "note": "完成图展示位置预留"
+      },
+      {
+        "title": "最初设定手绘",
+        "kind": "images",
+        "images": [
+          {
+            "src": "assets/portfolio/concepts-20261010/visit-sketch-top.webp",
+            "alt": "白蛇手绘俯视"
+          },
+          {
+            "src": "assets/portfolio/concepts-20261010/visit-sketch-side.webp",
+            "alt": "白蛇手绘侧视"
+          }
+        ]
+      },
+      {
+        "title": "白模造型",
+        "kind": "images",
+        "images": [
+          {
+            "src": "assets/portfolio/concepts-20261010/visit-clay.webp",
+            "alt": "白蛇白模造型"
+          }
+        ]
+      },
+      {
+        "title": "视觉参考",
+        "kind": "references",
+        "note": "参考图片用于呈现灵感来源。",
+        "images": [
+          {
+            "src": "assets/portfolio/concepts-20261010/visit-ref-01.webp",
+            "alt": "视觉参考 1"
+          },
+          {
+            "src": "assets/portfolio/concepts-20261010/visit-ref-02.webp",
+            "alt": "视觉参考 2"
+          },
+          {
+            "src": "assets/portfolio/concepts-20261010/visit-ref-03.webp",
+            "alt": "视觉参考 3"
+          },
+          {
+            "src": "assets/portfolio/concepts-20261010/visit-ref-04.webp",
+            "alt": "视觉参考 4"
+          },
+          {
+            "src": "assets/portfolio/concepts-20261010/visit-ref-05.webp",
+            "alt": "视觉参考 5"
+          },
+          {
+            "src": "assets/portfolio/concepts-20261010/visit-ref-06.webp",
+            "alt": "视觉参考 6"
+          },
+          {
+            "src": "assets/portfolio/concepts-20261010/visit-ref-07.webp",
+            "alt": "视觉参考 7"
+          },
+          {
+            "src": "assets/portfolio/concepts-20261010/visit-ref-08.webp",
+            "alt": "视觉参考 8"
+          },
+          {
+            "src": "assets/portfolio/concepts-20261010/visit-ref-09.webp",
+            "alt": "视觉参考 9"
+          }
+        ]
+      }
+    ],
+    "disclosure": "手绘与白模为设计过程；参考页图片为灵感参考。"
+  },
+  {
+    "id": "xlii-starcatcher",
+    "title": "天体捕食者",
+    "status": "process",
+    "publishable": true,
+    "stateLabel": "CONCEPT STUDIES",
+    "cover": "",
+    "alt": "天体捕食者完成图预留",
+    "thesis": "一只穿行于宇宙结构之间的天体捕食者。",
+    "boardBackground": "assets/portfolio/concepts-20261010/xlii-background.webp",
+    "boardTheme": "dark",
+    "slides": [
+      {
+        "kind": "reserved",
+        "title": "完成图",
+        "note": "完成图展示位置预留"
+      },
+      {
+        "title": "视觉参考",
+        "kind": "references",
+        "note": "参考图片用于呈现灵感来源。",
+        "images": [
+          {
+            "src": "assets/portfolio/concepts-20261010/xlii-ref-01.webp",
+            "alt": "视觉参考 1"
+          },
+          {
+            "src": "assets/portfolio/concepts-20261010/xlii-ref-02.webp",
+            "alt": "视觉参考 2"
+          },
+          {
+            "src": "assets/portfolio/concepts-20261010/xlii-ref-03.webp",
+            "alt": "视觉参考 3"
+          },
+          {
+            "src": "assets/portfolio/concepts-20261010/xlii-ref-04.webp",
+            "alt": "视觉参考 4"
+          },
+          {
+            "src": "assets/portfolio/concepts-20261010/xlii-ref-05.webp",
+            "alt": "视觉参考 5"
+          },
+          {
+            "src": "assets/portfolio/concepts-20261010/xlii-ref-06.webp",
+            "alt": "视觉参考 6"
+          },
+          {
+            "src": "assets/portfolio/concepts-20261010/xlii-ref-07.webp",
+            "alt": "视觉参考 7"
+          },
+          {
+            "src": "assets/portfolio/concepts-20261010/xlii-ref-08.webp",
+            "alt": "视觉参考 8"
+          }
+        ]
+      },
+      {
+        "title": "手绘草稿",
+        "kind": "images",
+        "images": [
+          {
+            "src": "assets/portfolio/concepts-20261010/xlii-sketch.webp",
+            "alt": "手绘草稿"
+          }
+        ]
+      },
+      {
+        "title": "手绘定稿",
+        "kind": "images",
+        "images": [
+          {
+            "src": "assets/portfolio/concepts-20261010/xlii-drawing.webp",
+            "alt": "手绘定稿"
+          }
+        ]
+      },
+      {
+        "title": "深度过程稿",
+        "kind": "images",
+        "images": [
+          {
+            "src": "assets/portfolio/concepts-20261010/xlii-depth.webp",
+            "alt": "深度过程稿"
+          }
+        ]
+      },
+      {
+        "title": "视觉开发过程",
+        "kind": "images",
+        "images": [
+          {
+            "src": "assets/portfolio/concepts-20261010/xlii-process.webp",
+            "alt": "视觉开发过程"
+          }
+        ]
+      }
+    ],
+    "video": {
+      "title": "第十三届世界渲染大赛｜XLII类天体捕食者",
+      "id": "BV125bc6XEqh",
+      "duration": "00:18"
     },
-    {
-      id: 'sci-fi-beach', title: '科幻沙滩', status: 'development', publishable: false,
-      stateLabel: 'GRAYBOX / DEVELOPMENT', cover: '', alt: '科幻沙滩的开发中项目位',
-      thesis: '未知星球上的海岸度假居所。',
-      evidence: ['Blender 灰盒', '空间与世界观提取表', '未验收的色彩与材质探索'],
-      disclosure: '当前仅为开发档案；未验收的候选图不作为公开终稿。'
-    },
-    {
-      id: 'shiwai-visit', title: '世外拜访', status: 'process', publishable: true,
-      stateLabel: 'BLENDER STUDY / PROCESS FRAME', cover: '', alt: '世外拜访的 Blender 场景过程证据',
-      thesis: '沿着峡谷与瀑布，走进一次世外拜访。',
-      evidence: ['Blender 地形与瀑布场景', '桥与人物镜头白模帧', '用户建模的大蛇'],
-      disclosure: '当前公开定位为 Blender 场景与过程研究；未将白模帧表述为最终渲染。'
-    },
-    {
-      id: 'xlii-starcatcher', title: '天体捕食者', status: 'final-video', publishable: true,
-      stateLabel: 'FINAL VIDEO / POSTER OR FRAME', cover: '', alt: 'XLII 类天体捕食者的竖版视频项目位',
-      thesis: '一只穿行于宇宙结构之间的天体捕食者。',
-      evidence: ['5 秒竖版最终视频', '现有渲染图', '已发布的动态作品链接'],
-      video: { title: '第十三届世界渲染大赛｜XLII类天体捕食者', id: 'BV125bc6XEqh', duration: '00:18' },
-      disclosure: '公开主载体为最终视频；任何静帧仅标注为海报或视频帧。'
-    }
-  ],
+    "disclosure": "手绘与过程图展示设计发展；参考页图片为灵感参考。"
+  }
+],
   sketches: [
     { id: 'mecha', title: '机甲', cover: '', assetStatus: 'reserved', sourceNote: '图片位置保留，待确认对应项目素材及展示授权。', disclosure: '尚未选择展示图；作者制作范围与 AI 辅助参与以确认后的素材记录为准。' },
     {
