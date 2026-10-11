@@ -218,7 +218,7 @@
         index=next;
         frames.forEach((frame,n)=>{frame.classList.toggle('is-active',n===index);frame.setAttribute('aria-hidden',String(n!==index));});
         schedule();
-      },index===5?650:250);
+      },(index===5?650:250)+(selectedProject.id==='wine-cellar-statue'?150:0));
     };
     const updatePause=()=>{pause.textContent=paused?'▶':'Ⅱ';pause.setAttribute('aria-label',paused?'播放过程':'暂停播放');pause.setAttribute('aria-pressed',String(paused));};
     pause.addEventListener('click',()=>{paused=!paused;updatePause();schedule();});

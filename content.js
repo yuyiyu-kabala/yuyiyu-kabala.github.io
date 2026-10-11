@@ -263,7 +263,7 @@ window.siteContent = {
         "ratio": 1.7777777777777777
       },
       {
-        "title": "星球与天体参考",
+        "title": "星球与海岸建筑参考",
         "kind": "references",
         "category": 5,
         "images": [
@@ -273,20 +273,6 @@ window.siteContent = {
             "credit": "Kevin M. Gill；NASA/JPL-Caltech/SwRI/MSSS",
             "sourcePage": "https://science.nasa.gov/photojournal/jupiter-marble/",
             "aspect": 1.0
-          },
-          {
-            "src": "assets/portfolio/approved-references-20261011/beach-ref-02.webp",
-            "alt": "Ring of Light｜大气边缘与环面叠层",
-            "credit": "NASA/JPL/Space Science Institute",
-            "sourcePage": "https://science.nasa.gov/photojournal/ring-of-light/",
-            "aspect": 1.3131443298969072
-          },
-          {
-            "src": "assets/portfolio/approved-references-20261011/beach-ref-03.webp",
-            "alt": "A Splendor Seldom Seen｜逆光土星与环带",
-            "credit": "NASA/JPL-Caltech/Space Science Institute",
-            "sourcePage": "https://science.nasa.gov/resource/a-splendor-seldom-seen-2/",
-            "aspect": 2.1512605042016806
           },
           {
             "src": "assets/portfolio/approved-references-20261011/beach-ref-04.webp",
@@ -301,21 +287,6 @@ window.siteContent = {
             "credit": "D. Kordan / ESO",
             "sourcePage": "https://www.eso.org/public/images/dok-1141-cc/",
             "aspect": 1.7802503477051461
-          }
-        ],
-        "ratio": 1.7777777777777777
-      },
-      {
-        "title": "海岸居所参考",
-        "kind": "references",
-        "category": 5,
-        "images": [
-          {
-            "src": "assets/portfolio/approved-references-20261011/beach-ref-06.webp",
-            "alt": "Beach House｜开敞客厅与海岸连接",
-            "credit": "建筑：Aamodt / Plumb Architects；所选 living 图：Eduard Hueber / archphoto",
-            "sourcePage": "https://www.archdaily.com/427222/beach-house-aamodt-plumb-architects",
-            "aspect": 1.509433962264151
           },
           {
             "src": "assets/portfolio/approved-references-20261011/beach-ref-07.webp",
@@ -330,29 +301,22 @@ window.siteContent = {
             "credit": "OPA / Open Platform for Architecture；图像：OPA Works",
             "sourcePage": "https://www.archdaily.com/769631/live-on-the-edge-with-opas-casa-brutale",
             "aspect": 1.3679890560875514
-          },
-          {
-            "src": "assets/portfolio/approved-references-20261011/beach-ref-09.webp",
-            "alt": "Cliff House｜垂直模块与海浪尺度",
-            "credit": "设计与图像：Modscape",
-            "sourcePage": "https://www.archdaily.com/547904/jump-off-a-cliff-and-land-in-bed-in-this-edgy-australian-home",
-            "aspect": 0.686
-          },
+          }
+        ],
+        "ratio": 1.7777777777777777
+      },
+      {
+        "title": "海岸与科幻室内参考",
+        "kind": "references",
+        "category": 5,
+        "images": [
           {
             "src": "assets/portfolio/approved-references-20261011/beach-ref-10.webp",
             "alt": "Tropical holidays｜浅湾与植被岸线",
             "credit": "Luigi，作者账号 raffyraffy",
             "sourcePage": "https://blenderartists.org/t/tropical-holidays/1164622",
             "aspect": 1.5984375
-          }
-        ],
-        "ratio": 1.7777777777777777
-      },
-      {
-        "title": "科幻室内参考",
-        "kind": "references",
-        "category": 5,
-        "images": [
+          },
           {
             "src": "assets/portfolio/approved-references-20261011/beach-ref-11.webp",
             "alt": "Scifi Apartment｜紧凑住宅结构",
@@ -372,13 +336,6 @@ window.siteContent = {
             "alt": "Futuristic apartment｜生活功能与未来设施",
             "credit": "Paco Barruguer，作者账号 pb3drender",
             "sourcePage": "https://blenderartists.org/t/futuristic-apartment/1150562",
-            "aspect": 1.7777777777777777
-          },
-          {
-            "src": "assets/portfolio/approved-references-20261011/beach-ref-14.webp",
-            "alt": "Futuristic Interior｜复古科幻控制台",
-            "credit": "leonnn（来源页公开账号，未核实真实姓名）",
-            "sourcePage": "https://blenderartists.org/t/futuristic-interior-design-sci-fi/1365306",
             "aspect": 1.7777777777777777
           },
           {
