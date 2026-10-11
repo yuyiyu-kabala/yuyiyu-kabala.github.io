@@ -80,19 +80,6 @@ window.siteContent = {
         "ratio": 0.562799043062201
       },
       {
-        "title": "白模过程",
-        "kind": "images",
-        "category": 4,
-        "images": [
-          {
-            "src": "assets/portfolio/concepts-fit-20261010/wine-clay.webp",
-            "alt": "酒窖雕像白模",
-            "aspect": 0.562799043062201
-          }
-        ],
-        "ratio": 0.562799043062201
-      },
-      {
         "title": "完成图与白模并排",
         "kind": "finished-pair",
         "category": 6,
@@ -295,6 +282,19 @@ window.siteContent = {
         "ratio": 1.7777777777777777
       },
       {
+        "title": "视觉开发过程",
+        "kind": "images",
+        "category": 4,
+        "images": [
+          {
+            "src": "assets/portfolio/concepts-fit-20261010/xlii-process.webp",
+            "alt": "视觉开发过程",
+            "aspect": 1.1064780342516753
+          }
+        ],
+        "ratio": 1.2
+      },
+      {
         "title": "深度与画面过程",
         "kind": "process-pair",
         "category": 4,
@@ -308,19 +308,6 @@ window.siteContent = {
             "src": "assets/portfolio/concepts-fit-20261010/xlii-0086.webp",
             "alt": "0086 画面过程",
             "aspect": 0.5625
-          }
-        ],
-        "ratio": 1.2
-      },
-      {
-        "title": "视觉开发过程",
-        "kind": "images",
-        "category": 4,
-        "images": [
-          {
-            "src": "assets/portfolio/concepts-fit-20261010/xlii-process.webp",
-            "alt": "视觉开发过程",
-            "aspect": 1.1064780342516753
           }
         ],
         "ratio": 1.2
@@ -493,6 +480,6 @@ window.siteContent = {
     { id: 'still-life-study', kind: 'commercial', label: '商业静物研究' },
     { id: 'motion', kind: 'motion', label: '已发布动态作品' }
   ],
-  resume: { label: 'RESUME / PDF', title: '一页看懂我的工作方式。', description: '简历正在更新 AI 辅助视觉开发与 Tripo S3 Top 100 入围内容。', path: 'resume/resume-yangxiaoyu.pdf', available: false },
+  resume: { label: '简历 PDF', title: '个人简历3.6', path: 'resume/resume-yuyiyu-3-6.pdf', available: true },
   contact: { heading: '有项目，或者有合适的位置？', note: '欢迎通过邮箱联系，也可以前往 B站查看更多动态作品。', links: [{ label: 'B站主页', href: 'https://space.bilibili.com/42045965' }] }
 };

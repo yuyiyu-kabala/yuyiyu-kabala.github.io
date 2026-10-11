@@ -25,7 +25,7 @@
     : item.status === 'final-video' ? '动态概念 · 视频为主要作品'
       : item.assetStatus === 'reserved' ? '画面待确认'
         : collections.includes(item) ? '分类作品 · 候选选图' : '概念开发中';
-  const contactLink = () => `<a class="contact-email" href="mailto:${escapeHtml(content.person.email)}">联系邮箱 · ${escapeHtml(content.person.email)} ↗</a>`;
+  const contactLink = () => `<div class="footer-contact"><a class="resume-link" href="${asset(content.resume.path)}" target="_blank" rel="noopener noreferrer">简历 PDF</a><span class="footer-separator" aria-hidden="true">/</span><a class="contact-email" href="mailto:${escapeHtml(content.person.email)}">联系邮箱 · ${escapeHtml(content.person.email)} ↗</a></div>`;
 
   function galleryFigure(item) {
     if (!item.clay) return `<figure class="gallery-image"><img src="${asset(item.src)}" alt="${escapeHtml(item.alt)}" loading="lazy"><figcaption>${escapeHtml(item.caption)}</figcaption></figure>`;
@@ -37,12 +37,14 @@
 
   function conceptPages(project) {
     return `<section class="concept-scroll ${project.boardTheme === 'light' ? 'board-light' : 'board-dark'}" aria-label="${escapeHtml(project.title)}作品" ${project.boardBackground ? `style="--board-background:url('${asset(project.boardBackground)}')"` : ''}>
-      ${project.slides.map((sheet,index) => `<article class="concept-sheet sheet-${escapeHtml(sheet.kind)}" style="--sheet-ratio:${sheet.ratio || 16 / 9}" data-sheet="${index}" data-category="${sheet.category}" aria-label="${escapeHtml(sheet.title)}">
+      ${project.slides.map((sheet,index) => `<article class="concept-sheet sheet-${escapeHtml(sheet.kind)} ${index===project.slides.length-1?'is-last-sheet':''}" style="--sheet-ratio:${sheet.ratio || 16 / 9}" data-sheet="${index}" data-category="${sheet.category}" aria-label="${escapeHtml(sheet.title)}">
+        ${sheet.category===5?'<span class="reference-label">部分参考展示</span>':''}
         <div class="sheet-art ${sheet.kind === 'references' ? `reference-mosaic mosaic-${sheet.images.length}` : ''}">
         ${sheet.kind === 'compare' ? `<figure class="gallery-image gallery-image-compare" style="--image-ratio:${sheet.images[0].aspect}" data-clay-reveal><div class="gallery-compare-frame"><img src="${asset(sheet.images[0].src)}" alt="${escapeHtml(sheet.images[0].alt)}" loading="lazy"><img class="gallery-clay" src="${asset(sheet.images[0].clay)}" alt="" aria-hidden="true" loading="lazy"></div><button type="button" class="gallery-reveal-toggle art-control" data-icon-toggle aria-label="查看白模" aria-pressed="false">◐</button></figure>`
-          : sheet.kind === 'sequence' ? `<div class="drawing-sequence"><div class="drawing-stage">${sheet.images.map((item,n)=>`<img src="${asset(item.src)}" alt="${escapeHtml(item.alt)}" class="drawing-frame ${n===0?'is-active':''}" aria-hidden="${n!==0}" loading="lazy">`).join('')}</div><button type="button" class="drawing-pause art-control" aria-label="暂停播放" aria-pressed="false">Ⅱ</button></div>`
+          : sheet.kind === 'sequence' ? `<div class="drawing-sequence"><div class="drawing-stage">${sheet.images.map((item,n)=>`<img src="${asset(item.src)}" alt="${escapeHtml(item.alt)}" class="drawing-frame ${n===0?'is-active':''}" aria-hidden="${n!==0}" loading="eager">`).join('')}</div><button type="button" class="drawing-pause art-control" aria-label="暂停播放" aria-pressed="false">Ⅱ</button></div>`
           : sheet.images.map(item=>`<a class="sheet-image" href="${asset(item.src)}" target="_blank" rel="noopener" aria-label="放大查看：${escapeHtml(item.alt)}"><img src="${asset(item.src)}" alt="${escapeHtml(item.alt)}" loading="lazy"></a>`).join('')}
         </div>
+        ${index===project.slides.length-1?'<span class="end-mark">End</span>':''}
       </article>`).join('')}
     </section>`;
   }
@@ -141,6 +143,7 @@
         </div>`}
         ${project.disclosure || project.sourceNote ? `<aside class="making-note"><h2>展示说明</h2><p>${escapeHtml(project.disclosure || project.sourceNote)}</p>${project.sourceNote && project.disclosure ? `<p>${escapeHtml(project.sourceNote)}</p>` : ''}</aside>` : ''}
         ${project.video?.id ? `<p class="video-note"><a href="https://www.bilibili.com/video/${encodeURIComponent(project.video.id)}" target="_blank" rel="noopener noreferrer">观看已发布动态作品 ↗</a><span>此链接需要联网；离线页面本身可正常浏览。</span></p>` : ''}
+        <div class="detail-end"><span class="end-mark">End</span></div>
         <div class="detail-next">${next ? `<a href="${projectHref(next.id)}">NEXT <strong>${escapeHtml(next.title)}</strong><small class="next-kind">概设</small><span aria-hidden="true">↗</span></a>` : isCollection ? `<a href="${project.videos ? 'index.html' : 'index.html#other-media'}">${project.videos ? '返回展示首页' : '返回更多视觉练习'} ↗</a>` : `<a href="index.html#sketches">返回初步概念设计稿 ↗</a>`}</div>
       </div>
       <footer class="site-footer"><span>YUYIYU · 概念设计 / 作品集展示</span>${contactLink()}</footer>
@@ -204,23 +207,21 @@
     const frames = [...sequence.querySelectorAll('.drawing-frame')];
     const pause = sequence.querySelector('.drawing-pause');
     const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
-    let index = 0, timer, inView = false, hovering = false, paused = motion.matches;
+    let index = 0, timer, inView = false, paused = motion.matches;
     const schedule = () => {
       clearTimeout(timer);
-      if (paused || hovering || document.hidden || !inView) return;
+      if (paused || document.hidden || !inView) return;
       timer = setTimeout(async () => {
         const next = (index+1)%frames.length;
-        try { await frames[next].decode(); } catch { return; }
-        if (paused || hovering || document.hidden || !inView) return;
+        try { await frames[next].decode(); } catch { schedule(); return; }
+        if (paused || document.hidden || !inView) return;
         index=next;
         frames.forEach((frame,n)=>{frame.classList.toggle('is-active',n===index);frame.setAttribute('aria-hidden',String(n!==index));});
         schedule();
-      },index===5?2800:1400);
+      },index===5?650:250);
     };
     const updatePause=()=>{pause.textContent=paused?'▶':'Ⅱ';pause.setAttribute('aria-label',paused?'播放过程':'暂停播放');pause.setAttribute('aria-pressed',String(paused));};
     pause.addEventListener('click',()=>{paused=!paused;updatePause();schedule();});
-    sequence.addEventListener('pointerenter',event=>{if(event.pointerType==='mouse'){hovering=true;schedule();}});
-    sequence.addEventListener('pointerleave',()=>{hovering=false;schedule();});
     document.addEventListener('visibilitychange',schedule);
     motion.addEventListener('change',()=>{if(motion.matches){paused=true;updatePause();schedule();}});
     new IntersectionObserver(entries=>{inView=entries[0].isIntersecting;schedule();},{threshold:0.2}).observe(sequence);
