@@ -80,6 +80,127 @@ window.siteContent = {
         "ratio": 0.562799043062201
       },
       {
+        "title": "酒窖参考一",
+        "kind": "references",
+        "category": 5,
+        "images": [
+          {
+            "src": "assets/portfolio/approved-references-20261011/wine-ref-01.webp",
+            "alt": "Eberbach｜回廊庭院与教堂体块",
+            "credit": "Stiftung Kloster Eberbach；页面未标明摄影者",
+            "sourcePage": "https://kloster-eberbach.de/en/vor-ort/klosterrundgang/weitere-highlights",
+            "aspect": 1.5005359056806002
+          },
+          {
+            "src": "assets/portfolio/approved-references-20261011/wine-ref-02.webp",
+            "alt": "Canterbury｜教堂与修道院区鸟瞰",
+            "credit": "Canterbury Cathedral；页面未标明摄影者",
+            "sourcePage": "https://learning.canterbury-cathedral.org/the-cathedral/",
+            "aspect": 0.9041095890410958
+          },
+          {
+            "src": "assets/portfolio/approved-references-20261011/wine-ref-03.webp",
+            "alt": "Eberbach｜Cabinet cellar 木桶酒窖",
+            "credit": "Stiftung Kloster Eberbach；页面未标明摄影者",
+            "sourcePage": "https://kloster-eberbach.de/en/vor-ort/klosterrundgang/weitere-highlights",
+            "aspect": 1.5033333333333334
+          },
+          {
+            "src": "assets/portfolio/approved-references-20261011/wine-ref-04.webp",
+            "alt": "Eberbach｜Fraternei 拱厅与酒桶",
+            "credit": "Stiftung Kloster Eberbach；页面未标明摄影者",
+            "sourcePage": "https://kloster-eberbach.de/en/vor-ort/klosterrundgang/weitere-highlights",
+            "aspect": 1.3953488372093024
+          },
+          {
+            "src": "assets/portfolio/approved-references-20261011/wine-ref-05.webp",
+            "alt": "Canterbury｜Western Crypt 地下礼拜空间",
+            "credit": "Canterbury Cathedral；页面未标明摄影者",
+            "sourcePage": "https://learning.canterbury-cathedral.org/the-cathedral/",
+            "aspect": 0.9228855721393034
+          },
+          {
+            "src": "assets/portfolio/approved-references-20261011/wine-ref-06.webp",
+            "alt": "Fountains｜Cellarium 储藏厅",
+            "credit": "National Trust；本图摄影者未核实（不套用其他 Cellarium 照片的署名）",
+            "sourcePage": "https://www.nationaltrust.org.uk/visit/yorkshire/fountains-abbey-and-studley-royal-water-garden/things-to-do-at-fountains-abbey",
+            "aspect": 1.7777777777777777
+          },
+          {
+            "src": "assets/portfolio/approved-references-20261011/wine-ref-07.webp",
+            "alt": "Lacock｜侧光照入石质回廊",
+            "credit": "National Trust Images / Emma Weston",
+            "sourcePage": "https://www.nationaltrust.org.uk/visit/wiltshire/lacock/history-of-lacock-abbey",
+            "aspect": 1.4992503748125936
+          },
+          {
+            "src": "assets/portfolio/approved-references-20261011/wine-ref-08.webp",
+            "alt": "Eberbach｜Monks dormitory 肋拱长厅",
+            "credit": "Stiftung Kloster Eberbach；页面未标明摄影者",
+            "sourcePage": "https://kloster-eberbach.de/en/vor-ort/klosterrundgang/weitere-highlights",
+            "aspect": 1.0762331838565022
+          }
+        ],
+        "ratio": 1.7777777777777777
+      },
+      {
+        "title": "酒窖参考二",
+        "kind": "references",
+        "category": 5,
+        "images": [
+          {
+            "src": "assets/portfolio/approved-references-20261011/wine-ref-09.webp",
+            "alt": "Eberbach｜Chapter hall 星形肋拱",
+            "credit": "Stiftung Kloster Eberbach；页面未标明摄影者",
+            "sourcePage": "https://kloster-eberbach.de/en/vor-ort/klosterrundgang/weitere-highlights",
+            "aspect": 1.4813432835820894
+          },
+          {
+            "src": "assets/portfolio/approved-references-20261011/wine-ref-10.webp",
+            "alt": "The Met｜披衣女性大理石像",
+            "credit": "古希腊雕刻者未详 / The Metropolitan Museum of Art（Public Domain）",
+            "sourcePage": "https://www.metmuseum.org/art/collection/search/248309",
+            "aspect": 0.6814285714285714
+          },
+          {
+            "src": "assets/portfolio/approved-references-20261011/wine-ref-11.webp",
+            "alt": "Getty｜披衣女性罗马像",
+            "credit": "古罗马雕刻者未详 / J. Paul Getty Museum；图像见官方修复文章",
+            "sourcePage": "https://www.getty.edu/art/collection/object/103QSQ",
+            "aspect": 0.6455
+          },
+          {
+            "src": "assets/portfolio/approved-references-20261011/wine-ref-12.webp",
+            "alt": "Louvre｜Diane de Gabies",
+            "credit": "© 2024 Musée du Louvre, Dist. GrandPalaisRmn / Raphaël Chipault；罗马雕刻者未详",
+            "sourcePage": "https://collections.louvre.fr/ark:/53355/cl010278726",
+            "aspect": 0.8
+          },
+          {
+            "src": "assets/portfolio/approved-references-20261011/wine-ref-13.webp",
+            "alt": "The Met｜白大理石台座",
+            "credit": "意大利作者未详 / The Metropolitan Museum of Art（Public Domain）",
+            "sourcePage": "https://www.metmuseum.org/art/collection/search/194461",
+            "aspect": 0.7295597484276729
+          },
+          {
+            "src": "assets/portfolio/approved-references-20261011/wine-ref-14.webp",
+            "alt": "The Met｜黄铜多臂烛吊灯",
+            "credit": "尼德兰作者未详 / The Metropolitan Museum of Art（Public Domain）",
+            "sourcePage": "https://www.metmuseum.org/art/collection/search/460463",
+            "aspect": 0.944
+          },
+          {
+            "src": "assets/portfolio/approved-references-20261011/wine-ref-15.webp",
+            "alt": "The Met｜桌面黄铜烛台",
+            "credit": "作者未详 / The Metropolitan Museum of Art（Public Domain）",
+            "sourcePage": "https://www.metmuseum.org/art/collection/search/1247",
+            "aspect": 0.757
+          }
+        ],
+        "ratio": 1.7777777777777777
+      },
+      {
         "title": "完成图与白模并排",
         "kind": "finished-pair",
         "category": 6,
@@ -137,6 +258,135 @@ window.siteContent = {
             "src": "assets/portfolio/concepts-fit-20261010/beach-process-v3-13.webp",
             "alt": "阶段修订过程",
             "aspect": 1.3977379830348728
+          }
+        ],
+        "ratio": 1.7777777777777777
+      },
+      {
+        "title": "星球与天体参考",
+        "kind": "references",
+        "category": 5,
+        "images": [
+          {
+            "src": "assets/portfolio/approved-references-20261011/beach-ref-01.webp",
+            "alt": "Jupiter Marble｜木星云层与明暗边界",
+            "credit": "Kevin M. Gill；NASA/JPL-Caltech/SwRI/MSSS",
+            "sourcePage": "https://science.nasa.gov/photojournal/jupiter-marble/",
+            "aspect": 1.0
+          },
+          {
+            "src": "assets/portfolio/approved-references-20261011/beach-ref-02.webp",
+            "alt": "Ring of Light｜大气边缘与环面叠层",
+            "credit": "NASA/JPL/Space Science Institute",
+            "sourcePage": "https://science.nasa.gov/photojournal/ring-of-light/",
+            "aspect": 1.3131443298969072
+          },
+          {
+            "src": "assets/portfolio/approved-references-20261011/beach-ref-03.webp",
+            "alt": "A Splendor Seldom Seen｜逆光土星与环带",
+            "credit": "NASA/JPL-Caltech/Space Science Institute",
+            "sourcePage": "https://science.nasa.gov/resource/a-splendor-seldom-seen-2/",
+            "aspect": 2.1512605042016806
+          },
+          {
+            "src": "assets/portfolio/approved-references-20261011/beach-ref-04.webp",
+            "alt": "Blue Marble 2012｜海洋、云层与大气边界",
+            "credit": "NASA/NOAA/GSFC/Suomi NPP/VIIRS/Norman Kuring",
+            "sourcePage": "https://science.nasa.gov/image-detail/amf-gsfc_20171208_archive_e001386/",
+            "aspect": 1.0
+          },
+          {
+            "src": "assets/portfolio/approved-references-20261011/beach-ref-05.webp",
+            "alt": "Galactic arch over ALMA｜银河与地面设施",
+            "credit": "D. Kordan / ESO",
+            "sourcePage": "https://www.eso.org/public/images/dok-1141-cc/",
+            "aspect": 1.7802503477051461
+          }
+        ],
+        "ratio": 1.7777777777777777
+      },
+      {
+        "title": "海岸居所参考",
+        "kind": "references",
+        "category": 5,
+        "images": [
+          {
+            "src": "assets/portfolio/approved-references-20261011/beach-ref-06.webp",
+            "alt": "Beach House｜开敞客厅与海岸连接",
+            "credit": "建筑：Aamodt / Plumb Architects；所选 living 图：Eduard Hueber / archphoto",
+            "sourcePage": "https://www.archdaily.com/427222/beach-house-aamodt-plumb-architects",
+            "aspect": 1.509433962264151
+          },
+          {
+            "src": "assets/portfolio/approved-references-20261011/beach-ref-07.webp",
+            "alt": "House on the Cliff｜岩体、平台与悬挑",
+            "credit": "建筑：Fran Silvestre Arquitectos；摄影：Diego Opazo",
+            "sourcePage": "https://www.archdaily.com/295703/house-on-the-cliff-fran-silvestre-arquitectos",
+            "aspect": 1.9102196752626552
+          },
+          {
+            "src": "assets/portfolio/approved-references-20261011/beach-ref-08.webp",
+            "alt": "Casa Brutale｜嵌入悬崖的海景居所",
+            "credit": "OPA / Open Platform for Architecture；图像：OPA Works",
+            "sourcePage": "https://www.archdaily.com/769631/live-on-the-edge-with-opas-casa-brutale",
+            "aspect": 1.3679890560875514
+          },
+          {
+            "src": "assets/portfolio/approved-references-20261011/beach-ref-09.webp",
+            "alt": "Cliff House｜垂直模块与海浪尺度",
+            "credit": "设计与图像：Modscape",
+            "sourcePage": "https://www.archdaily.com/547904/jump-off-a-cliff-and-land-in-bed-in-this-edgy-australian-home",
+            "aspect": 0.686
+          },
+          {
+            "src": "assets/portfolio/approved-references-20261011/beach-ref-10.webp",
+            "alt": "Tropical holidays｜浅湾与植被岸线",
+            "credit": "Luigi，作者账号 raffyraffy",
+            "sourcePage": "https://blenderartists.org/t/tropical-holidays/1164622",
+            "aspect": 1.5984375
+          }
+        ],
+        "ratio": 1.7777777777777777
+      },
+      {
+        "title": "科幻室内参考",
+        "kind": "references",
+        "category": 5,
+        "images": [
+          {
+            "src": "assets/portfolio/approved-references-20261011/beach-ref-11.webp",
+            "alt": "Scifi Apartment｜紧凑住宅结构",
+            "credit": "Marko / MarkOm3D，作者账号 MarkOm",
+            "sourcePage": "https://blenderartists.org/t/scifi-apartment/1453330",
+            "aspect": 1.7777777777777777
+          },
+          {
+            "src": "assets/portfolio/approved-references-20261011/beach-ref-12.webp",
+            "alt": "Cyberpunk room｜维护细节与个人物品",
+            "credit": "Polina Suvorova，作者账号 Suvorova_Polina",
+            "sourcePage": "https://blenderartists.org/t/cyberpunk-room/1535920",
+            "aspect": 1.1428571428571428
+          },
+          {
+            "src": "assets/portfolio/approved-references-20261011/beach-ref-13.webp",
+            "alt": "Futuristic apartment｜生活功能与未来设施",
+            "credit": "Paco Barruguer，作者账号 pb3drender",
+            "sourcePage": "https://blenderartists.org/t/futuristic-apartment/1150562",
+            "aspect": 1.7777777777777777
+          },
+          {
+            "src": "assets/portfolio/approved-references-20261011/beach-ref-14.webp",
+            "alt": "Futuristic Interior｜复古科幻控制台",
+            "credit": "leonnn（来源页公开账号，未核实真实姓名）",
+            "sourcePage": "https://blenderartists.org/t/futuristic-interior-design-sci-fi/1365306",
+            "aspect": 1.7777777777777777
+          },
+          {
+            "src": "assets/portfolio/approved-references-20261011/beach-ref-15.webp",
+            "alt": "Interior Design: Cyberpunk｜工业空间中的居住痕迹",
+            "credit": "Nilo Neto / Brazilian Studio Tanichan，发布账号 NiloNetoKochan",
+            "sourcePage": "https://forum.d5render.com/t/interior-design-cyberpunk/14258",
+            "aspect": 1.0
           }
         ],
         "ratio": 1.7777777777777777
