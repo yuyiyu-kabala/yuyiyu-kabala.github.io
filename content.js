@@ -600,23 +600,120 @@ window.siteContent = {
   }
 ],
   sketches: [
-    { id: 'mecha', title: '机甲', cover: '', assetStatus: 'reserved', sourceNote: '图片位置保留，待确认对应项目素材及展示授权。', disclosure: '尚未选择展示图；作者制作范围与 AI 辅助参与以确认后的素材记录为准。' },
+    {
+      "id": "mecha",
+      "title": "机甲 · 天庭号",
+      "cover": "assets/portfolio/sketch-additions-20261011/mecha-model-01.png",
+      "alt": "天庭号机甲分块模型",
+      "assetStatus": "approved",
+      "boardTheme": "dark",
+      "slides": [
+        {
+          "title": "天庭号分块模型一",
+          "kind": "images",
+          "category": 4,
+          "ratio": 1.8356164383561644,
+          "images": [
+            {
+              "src": "assets/portfolio/sketch-additions-20261011/mecha-model-01.png",
+              "alt": "作者天庭号分块白模：收拢姿态",
+              "aspect": 1.8356164383561644
+            }
+          ]
+        },
+        {
+          "title": "天庭号分块模型二",
+          "kind": "images",
+          "category": 4,
+          "ratio": 1.3846153846153846,
+          "images": [
+            {
+              "src": "assets/portfolio/sketch-additions-20261011/mecha-model-02.png",
+              "alt": "作者天庭号分块白模：展开姿态",
+              "aspect": 1.3846153846153846
+            }
+          ]
+        },
+        {
+          "title": "机甲整体造型参考",
+          "kind": "references",
+          "category": 5,
+          "ratio": 1.7777777777777777,
+          "images": [
+            {
+              "src": "assets/portfolio/sketch-additions-20261011/mecha-ref-01.png",
+              "alt": "第三方机甲整体造型参考 1",
+              "credit": "用户提供的第三方参考，保留原图水印；作者与原始作品页未核实"
+            },
+            {
+              "src": "assets/portfolio/sketch-additions-20261011/mecha-ref-02.png",
+              "alt": "第三方机甲整体造型参考 2",
+              "credit": "用户提供的第三方参考，保留原图水印；作者与原始作品页未核实"
+            },
+            {
+              "src": "assets/portfolio/sketch-additions-20261011/mecha-ref-03.png",
+              "alt": "第三方机甲整体造型参考 3",
+              "credit": "用户提供的第三方参考，保留原图水印；作者与原始作品页未核实"
+            },
+            {
+              "src": "assets/portfolio/sketch-additions-20261011/mecha-ref-04.png",
+              "alt": "第三方机甲整体造型参考 4",
+              "credit": "用户提供的第三方参考，保留原图水印；作者与原始作品页未核实"
+            },
+            {
+              "src": "assets/portfolio/sketch-additions-20261011/mecha-ref-05.png",
+              "alt": "第三方机甲整体造型参考 5",
+              "credit": "用户提供的第三方参考，保留原图水印；作者与原始作品页未核实"
+            }
+          ]
+        },
+        {
+          "title": "机甲部件参考",
+          "kind": "references",
+          "category": 5,
+          "ratio": 1.7777777777777777,
+          "images": [
+            {
+              "src": "assets/portfolio/sketch-additions-20261011/mecha-ref-06.png",
+              "alt": "第三方机甲部件细节参考 6",
+              "credit": "用户提供的第三方参考，保留原图水印；作者与原始作品页未核实"
+            },
+            {
+              "src": "assets/portfolio/sketch-additions-20261011/mecha-ref-07.png",
+              "alt": "第三方机甲部件细节参考 7",
+              "credit": "用户提供的第三方参考，保留原图水印；作者与原始作品页未核实"
+            },
+            {
+              "src": "assets/portfolio/sketch-additions-20261011/mecha-ref-08.png",
+              "alt": "第三方机甲部件细节参考 8",
+              "credit": "用户提供的第三方参考，保留原图水印；作者与原始作品页未核实"
+            }
+          ]
+        }
+      ],
+      "sourceNote": "",
+      "disclosure": "展示作者制作的分块模型练习；参考页为第三方机甲造型与部件资料。"
+    },
     {
       id: 'flower-phone-booth', title: '星空花海', thesis: '星空与花海中的电话亭场景研究。',
       cover: 'assets/portfolio/planet.png', alt: '星空花海中的电话亭与行星画面', assetStatus: 'approved',
-      gallery: [{ src: 'assets/portfolio/planet.png', clay: 'assets/portfolio/planet-clay-user-v2.png', aspect: 1774 / 887, alt: '星空花海电话亭与行星环境画面', caption: '星空花海 · AI 辅助视觉再设计 / 原工程阶段图参考' }],
+      gallery: [
+        { src: 'assets/portfolio/planet.png', clay: 'assets/portfolio/planet-clay-user-v2.png', aspect: 1774 / 887, alt: '星空花海电话亭与行星环境画面', caption: '星空花海 · AI 辅助视觉再设计 / 原工程阶段图参考' },
+        { src: 'assets/portfolio/sketch-additions-20261011/planet-self-render.png', clay: 'assets/portfolio/planet-clay-user-v2.png', aspect: 2933 / 1467, alt: '星空花海作者自渲染原图', caption: '星空花海 · 作者自渲染原图，非 AI / 原工程阶段白膜', claySource: 'original-engine' }
+      ],
       sourceNote: '',
-      disclosure: '已审核的 AI 辅助视觉再设计成品图；可切换查看用户提供的原工程阶段图。阶段图保留了草地颜色，不是纯白模，也不是成品图的同机位复刻。'
+      disclosure: '第一张为 AI 辅助视觉再设计，第二张为作者自渲染原图，非 AI。两张均可切换查看对应原工程阶段图；阶段图保留草地颜色，构图与出图版本有所差异。'
     },
     {
       id: 'piano-space', title: '钢琴空间', thesis: '暖色与冷色的钢琴空间视觉研究。',
       cover: 'assets/portfolio/piano-warm.png', alt: '暖色钢琴空间成品画面', assetStatus: 'approved',
       gallery: [
         { src: 'assets/portfolio/piano-warm.png', clay: 'assets/portfolio/piano-cool-clay-ai-v5.png', aspect: 1800 / 874, alt: '暖色钢琴空间画面', caption: '钢琴空间 · 暖色成品图 / AI 白膜示意' },
-        { src: 'assets/portfolio/piano-cool.png', clay: 'assets/portfolio/piano-cool-clay-ai-v5.png', aspect: 1800 / 873, alt: '冷色钢琴空间画面', caption: '钢琴空间 · 冷色成品图 / AI 白膜示意' }
+        { src: 'assets/portfolio/piano-cool.png', clay: 'assets/portfolio/piano-cool-clay-ai-v5.png', aspect: 1800 / 873, alt: '冷色钢琴空间画面', caption: '钢琴空间 · 冷色成品图 / AI 白膜示意' },
+        { src: 'assets/portfolio/sketch-additions-20261011/piano-self-render.png', clay: 'assets/portfolio/sketch-additions-20261011/piano-original-clay.png', aspect: 2843 / 1378, alt: '钢琴空间作者自渲染原图', caption: '钢琴空间 · 作者自渲染原图，非 AI / 原工程灰模', claySource: 'original-engine' }
       ],
-      sourceNote: '图片为 AI 生成，基于同一白模制作。',
-      disclosure: '暖色与冷色图均可切换查看同一张 AI 白膜示意，基于冷色成品制作，含局部 AI 重绘，非实际 Blender/UE 白模渲染或几何验证。'
+      sourceNote: '暖色与冷色版本含 AI 辅助视觉制作；自渲染原图由作者渲染，非 AI。',
+      disclosure: '前两张为暖色与冷色 AI 辅助版本，配同一张 AI 白膜示意；第三张为作者自渲染原图，非 AI，配对应原工程灰模参考。原工程灰模与自渲染原图的画幅、机位略有差异。'
     }
   ],
   collections: [

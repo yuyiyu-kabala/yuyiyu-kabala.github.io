@@ -19,6 +19,7 @@
   const projectHref = (id) => `?project=${encodeURIComponent(id)}`;
   const navHref = (id) => `${projectHref(id)}&rail=open`;
   const asset = (path) => escapeHtml(path);
+  const titleMarkup = (item) => item.id === 'mecha' ? escapeHtml(item.title).replace(' · ', ' <span class="title-dot">·</span> ') : escapeHtml(item.title);
   const label = (item) => item.status === 'candidate' ? 'AI 辅助候选视觉 · 非最终渲染'
     : item.status === 'approved' ? '概念设计 · 已确认展示'
     : item.status === 'process' ? '概念设计 · 手绘与过程'
@@ -61,7 +62,7 @@
             <summary class="nav-heading">概念设计</summary>
             <div class="nav-children">${worlds.map((world, index) => `<a class="nav-link ${selectedProject?.id === world.id ? 'is-current' : ''}" ${selectedProject?.id === world.id ? 'aria-current="page"' : ''} href="${navHref(world.id)}"><span class="nav-number">0${index + 1}</span><span>${escapeHtml(world.title)}</span></a>`).join('')}</div>
             <a class="nav-heading sketch-heading" href="index.html?rail=open#sketches">/初步概念设计稿</a>
-            <div class="nav-children">${sketches.map((sketch) => `<a class="nav-link ${selectedProject?.id === sketch.id ? 'is-current' : ''}" ${selectedProject?.id === sketch.id ? 'aria-current="page"' : ''} href="${navHref(sketch.id)}"><span class="nav-number">·</span><span>${escapeHtml(sketch.title)}</span></a>`).join('')}</div>
+            <div class="nav-children">${sketches.map((sketch) => `<a class="nav-link ${selectedProject?.id === sketch.id ? 'is-current' : ''}" ${selectedProject?.id === sketch.id ? 'aria-current="page"' : ''} href="${navHref(sketch.id)}"><span class="nav-number">·</span><span>${titleMarkup(sketch)}</span></a>`).join('')}</div>
           </details>
           <div class="nav-group nav-group-secondary">
             <a class="nav-heading ${selectedProject?.id === 'stylized' ? 'is-current' : ''}" href="${navHref('stylized')}">风格化</a>
@@ -83,7 +84,6 @@
         <p class="eyebrow">0${index + 1} / 0${worlds.length}　${escapeHtml(world.stateLabel)}</p>
         <h1>${escapeHtml(world.title)}</h1>
         <p class="stage-thesis">${escapeHtml(world.thesis)}</p>
-        <p class="asset-label">${label(world)}</p>
         <a class="explore-link" href="${projectHref(world.id)}">概念展开 <span aria-hidden="true">↗</span></a>
       </div>
     </section>`;
@@ -99,8 +99,8 @@
         </button>`).join('')}
       </div>
       <p class="view-hint">选择下方作品，点击「概念展开」查看独立作品页。</p>
-      <section class="sketch-section" id="sketches"><div class="section-intro"><span class="section-kicker">STUDIES / OPEN SLOTS</span><h2>/初步概念设计稿</h2><p>钢琴空间与星空花海现已展示成品画面；机甲位置留待后续补充。</p></div>
-        <div class="sketch-grid">${sketches.map((sketch) => `<a class="sketch-card${sketch.cover ? ' has-cover' : ''}" href="${projectHref(sketch.id)}">${sketch.cover ? `<img src="${asset(sketch.cover)}" alt="${escapeHtml(sketch.alt)}">` : '<span class="reserved-mark">IMAGE RESERVED</span>'}<strong>${escapeHtml(sketch.title)}</strong><span>${sketch.cover ? '查看作品 ↗' : '查看预留页 ↗'}</span></a>`).join('')}</div>
+      <section class="sketch-section" id="sketches"><div class="section-intro"><span class="section-kicker">STUDIES / OPEN SLOTS</span><h2>/初步概念设计稿</h2><p>机甲模型练习、星空花海与钢琴空间。</p></div>
+        <div class="sketch-grid">${sketches.map((sketch) => `<a class="sketch-card${sketch.cover ? ' has-cover' : ''}" href="${projectHref(sketch.id)}">${sketch.cover ? `<img src="${asset(sketch.cover)}" alt="${escapeHtml(sketch.alt)}">` : '<span class="reserved-mark">IMAGE RESERVED</span>'}<strong>${titleMarkup(sketch)}</strong><span>${sketch.cover ? '查看作品 ↗' : '查看预留页 ↗'}</span></a>`).join('')}</div>
       </section>
       <section class="more-section" id="other-media"><div class="section-intro"><span class="section-kicker">OTHER PRACTICES</span><h2>更多视觉练习</h2><p>风格化、电商渲染与动态作品是主线之外的补充。</p></div>
         <div class="more-grid">
@@ -118,7 +118,7 @@
   }
 
   function detail(project) {
-    if (project.slides) return `${sidebar()}<main id="main-content" class="main-shell concept-detail"><header class="concept-page-header"><a href="index.html" aria-label="返回作品首页">←</a><h1>${escapeHtml(project.title)}</h1></header>${conceptPages(project)}<footer class="site-footer"><span>YUYIYU</span>${contactLink()}</footer></main>`;
+    if (project.slides) return `${sidebar()}<main id="main-content" class="main-shell concept-detail"><header class="concept-page-header"><a href="index.html" aria-label="返回作品首页">←</a><h1>${titleMarkup(project)}</h1></header>${conceptPages(project)}<footer class="site-footer"><span>YUYIYU</span>${contactLink()}</footer></main>`;
     const isSketch = sketches.includes(project);
     const isCollection = collections.includes(project);
     const currentIndex = worlds.indexOf(project);
@@ -129,7 +129,7 @@
       <header class="detail-hero ${project.cover ? 'has-cover' : 'is-reserved'}">
         ${project.cover ? `<img src="${asset(project.cover)}" alt="${escapeHtml(project.alt || project.title)}">` : `<div class="detail-empty"><span>IMAGE RESERVED</span><small>等待确认的作品图</small></div>`}
         <div class="detail-shade"></div>
-        <div class="detail-title"><span>${isSketch ? 'CONCEPT STUDY' : isCollection ? escapeHtml(project.category) : 'SELECTED CONCEPT'}</span><h1>${escapeHtml(project.title)}</h1><p>${escapeHtml(description)}</p></div>
+        <div class="detail-title"><span>${isSketch ? 'CONCEPT STUDY' : isCollection ? escapeHtml(project.category) : 'SELECTED CONCEPT'}</span><h1>${titleMarkup(project)}</h1><p>${escapeHtml(description)}</p></div>
       </header>
       <div class="detail-body">
         <div class="detail-intro"><span>ABOUT THE CONCEPT</span><p>${escapeHtml(description)}</p></div>

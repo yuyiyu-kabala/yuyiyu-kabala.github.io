@@ -158,6 +158,8 @@ img { display: block; max-width: 100%; }
 .mosaic-9 { grid-template-columns: repeat(3,minmax(0,1fr)); grid-template-rows: repeat(3,minmax(0,1fr)); }
 .mosaic-10 { grid-template-columns: repeat(5,minmax(0,1fr)); }
 .mosaic-5 { grid-template-columns: repeat(3,minmax(0,1fr)); }
+.mosaic-3 { grid-template-columns: repeat(3,minmax(0,1fr)); grid-template-rows: minmax(0,1fr); }
+.title-dot { font-size: 1.2em; line-height: 0; vertical-align: baseline; }
 .sheet-reference-solo .sheet-art { inset: 5%; }
 .sheet-references .sheet-art, .sheet-reference-solo .sheet-art { top: max(12%, 44px); }
 .reference-label { position: absolute; top: 3%; left: 6%; font-size: clamp(11px, 1.1vw, 16px); line-height: 1.5; letter-spacing: .06em; opacity: .85; }
