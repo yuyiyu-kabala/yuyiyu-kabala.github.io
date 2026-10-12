@@ -41,7 +41,8 @@
       ${project.slides.map((sheet,index) => `<article class="concept-sheet sheet-${escapeHtml(sheet.kind)} ${index===project.slides.length-1?'is-last-sheet':''}" style="--sheet-ratio:${sheet.ratio || 16 / 9}" data-sheet="${index}" data-category="${sheet.category}" aria-label="${escapeHtml(sheet.title)}">
         ${sheet.category===5?'<span class="reference-label">部分参考展示</span>':''}
         <div class="sheet-art ${sheet.kind === 'references' ? `reference-mosaic mosaic-${sheet.images.length}` : ''}">
-        ${sheet.kind === 'compare' ? `<figure class="gallery-image gallery-image-compare" style="--image-ratio:${sheet.images[0].aspect}" data-clay-reveal><div class="gallery-compare-frame"><img src="${asset(sheet.images[0].src)}" alt="${escapeHtml(sheet.images[0].alt)}" loading="lazy"><img class="gallery-clay" src="${asset(sheet.images[0].clay)}" alt="" aria-hidden="true" loading="lazy"></div><button type="button" class="gallery-reveal-toggle art-control" data-icon-toggle aria-label="查看白模" aria-pressed="false">◐</button></figure>`
+        ${sheet.kind === 'compare' ? `<figure class="gallery-image gallery-image-compare" style="--image-ratio:${sheet.images[0].aspect}" data-clay-reveal><div class="gallery-compare-frame"><img src="${asset(sheet.images[0].src)}" alt="${escapeHtml(sheet.images[0].alt)}" loading="lazy"><img class="gallery-clay" src="${asset(sheet.images[0].clay)}" alt="" aria-hidden="true" loading="eager"></div><button type="button" class="gallery-reveal-toggle art-control" data-icon-toggle aria-label="查看白模" aria-pressed="false">◐</button></figure>`
+          : sheet.kind === 'video' ? `<a class="concept-video" href="https://www.bilibili.com/video/${encodeURIComponent(sheet.video.id)}/" target="_blank" rel="noopener noreferrer" aria-label="视频作品：${escapeHtml(sheet.video.title)}，点击跳转至 B 站"><img src="${asset(sheet.images[0].src)}" alt="${escapeHtml(sheet.images[0].alt)}" loading="lazy"><span class="video-mark" aria-hidden="true">▶</span><span class="concept-video-label">视频作品 · 点击跳转至 B 站 ↗</span></a>`
           : sheet.kind === 'sequence' ? `<div class="drawing-sequence"><div class="drawing-stage">${sheet.images.map((item,n)=>`<img src="${asset(item.src)}" alt="${escapeHtml(item.alt)}" class="drawing-frame ${n===0?'is-active':''}" aria-hidden="${n!==0}" loading="eager">`).join('')}</div><button type="button" class="drawing-pause art-control" aria-label="暂停播放" aria-pressed="false">Ⅱ</button></div>`
           : sheet.images.map(item=>`<a class="sheet-image" href="${asset(item.src)}" target="_blank" rel="noopener" aria-label="放大查看：${escapeHtml(item.alt)}"><img src="${asset(item.src)}" alt="${escapeHtml(item.alt)}" loading="lazy"></a>`).join('')}
         </div>
@@ -98,7 +99,7 @@
           <span class="film-caption"><small>0${index + 1}</small><strong>${escapeHtml(world.title)}</strong></span>
         </button>`).join('')}
       </div>
-      <p class="view-hint">选择下方作品，点击「概念展开」查看独立作品页。</p>
+      <p class="view-hint">单击下方作品切换；双击缩略图或主画面，也可打开作品页。</p>
       <section class="sketch-section" id="sketches"><div class="section-intro"><span class="section-kicker">STUDIES / OPEN SLOTS</span><h2>/初步概念设计稿</h2><p>世外拜访、机甲模型练习、星空花海与钢琴空间。</p></div>
         <div class="sketch-grid">${sketches.map((sketch) => `<a class="sketch-card${sketch.cover ? ' has-cover' : ''}" href="${projectHref(sketch.id)}">${sketch.cover ? `<img src="${asset(sketch.cover)}" alt="${escapeHtml(sketch.alt)}">` : '<span class="reserved-mark">IMAGE RESERVED</span>'}<strong>${titleMarkup(sketch)}</strong><span>${sketch.cover ? '查看作品 ↗' : '查看预留页 ↗'}</span></a>`).join('')}</div>
       </section>
@@ -118,7 +119,7 @@
   }
 
   function detail(project) {
-    if (project.slides) return `${sidebar()}<main id="main-content" class="main-shell concept-detail"><header class="concept-page-header"><a href="index.html" aria-label="返回作品首页">←</a><h1>${titleMarkup(project)}</h1></header>${conceptPages(project)}<footer class="site-footer"><span>YUYIYU</span>${contactLink()}</footer></main>`;
+    if (project.slides) return `${sidebar()}<main id="main-content" class="main-shell concept-detail"><header class="concept-page-header"><a href="index.html" aria-label="返回作品首页">←</a><h1>${titleMarkup(project)}</h1></header>${conceptPages(project)}${['sci-fi-beach','xlii-starcatcher'].includes(project.id)?`<p class="concept-making-note">${escapeHtml(project.disclosure)}</p>`:''}<footer class="site-footer"><span>YUYIYU</span>${contactLink()}</footer></main>`;
     const isSketch = sketches.includes(project);
     const isCollection = collections.includes(project);
     const currentIndex = worlds.indexOf(project);
@@ -218,7 +219,7 @@
         index=next;
         frames.forEach((frame,n)=>{frame.classList.toggle('is-active',n===index);frame.setAttribute('aria-hidden',String(n!==index));});
         schedule();
-      },(index===5?650:250)+(selectedProject.id==='wine-cellar-statue'?150:0));
+      },index===frames.length-1?800:400);
     };
     const updatePause=()=>{pause.textContent=paused?'▶':'Ⅱ';pause.setAttribute('aria-label',paused?'播放过程':'暂停播放');pause.setAttribute('aria-pressed',String(paused));};
     pause.addEventListener('click',()=>{paused=!paused;updatePause();schedule();});
@@ -246,7 +247,13 @@
   }
 
   if (!selectedProject) {
+    document.getElementById('stage-mount').addEventListener('dblclick', (event) => {
+      if (!event.target.closest('a,button')) window.location.href = projectHref(worlds[activeWorld].id);
+    });
     document.querySelectorAll('[data-world-index]').forEach((button) => {
+      button.addEventListener('dblclick', () => {
+        window.location.href = projectHref(worlds[Number(button.dataset.worldIndex)].id);
+      });
       button.addEventListener('click', () => {
         activeWorld = Number(button.dataset.worldIndex);
         document.getElementById('stage-mount').innerHTML = stage(worlds[activeWorld], activeWorld);

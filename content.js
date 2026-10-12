@@ -224,13 +224,60 @@ window.siteContent = {
   {
     "id": "sci-fi-beach",
     "title": "科幻沙滩",
-    "status": "process",
+    "status": "approved",
     "publishable": true,
-    "stateLabel": "CONCEPT STUDIES",
-    "cover": "",
-    "alt": "科幻沙滩完成图预留",
+    "stateLabel": "SELECTED CONCEPT",
+    "cover": "assets/portfolio/concept-finals-20261013/beach-final.png",
+    "alt": "科幻沙滩已确认定稿",
     "thesis": "未知星球上的海岸度假居所。",
     "slides": [
+      {
+        "title": "定稿与白膜",
+        "kind": "compare",
+        "category": 6,
+        "images": [
+          {
+            "src": "assets/portfolio/concept-finals-20261013/beach-final.png",
+            "clay": "assets/portfolio/concept-finals-20261013/beach-clay.png",
+            "alt": "科幻沙滩已确认定稿",
+            "aspect": 1.3977379830348728
+          }
+        ],
+        "ratio": 1.3977379830348728
+      },
+      {
+        "title": "原工程制作过程",
+        "kind": "sequence",
+        "category": 3,
+        "images": [
+          {
+            "src": "assets/portfolio/concept-finals-20261013/beach-process-0.png",
+            "alt": "科幻沙滩原工程过程 0",
+            "aspect": 1.3977777777777778
+          },
+          {
+            "src": "assets/portfolio/concept-finals-20261013/beach-process-1.png",
+            "alt": "科幻沙滩原工程过程 1",
+            "aspect": 1.3977777777777778
+          },
+          {
+            "src": "assets/portfolio/concept-finals-20261013/beach-process-2.png",
+            "alt": "科幻沙滩原工程过程 2",
+            "aspect": 1.3977777777777778
+          },
+          {
+            "src": "assets/portfolio/concept-finals-20261013/beach-process-3.png",
+            "alt": "科幻沙滩原工程过程 3",
+            "aspect": 1.3977777777777778
+          },
+          {
+            "src": "assets/portfolio/concept-finals-20261013/beach-process-4.png",
+            "alt": "科幻沙滩原工程过程 4",
+            "aspect": 1.3977777777777778
+          }
+        ],
+        "ratio": 1.3977777777777778
+      },
       {
         "title": "白模版本过程",
         "kind": "images",
@@ -349,20 +396,33 @@ window.siteContent = {
         "ratio": 1.7777777777777777
       }
     ],
-    "disclosure": ""
+    "disclosure": "定稿含 AI 辅助视觉制作；白膜与编号过程图为原工程阶段图。用户已确认本次定稿用于网站展示。"
   },
   {
     "id": "xlii-starcatcher",
     "title": "天体捕食者",
-    "status": "process",
+    "status": "approved",
     "publishable": true,
-    "stateLabel": "CONCEPT STUDIES",
-    "cover": "",
-    "alt": "天体捕食者完成图预留",
+    "stateLabel": "SELECTED CONCEPT",
+    "cover": "assets/portfolio/concept-finals-20261013/xlii-final.png",
+    "alt": "天体捕食者已确认展示图",
     "thesis": "一只穿行于宇宙结构之间的天体捕食者。",
     "boardBackground": "assets/portfolio/concepts-fit-20261010/xlii-background.webp",
     "boardTheme": "dark",
     "slides": [
+      {
+        "title": "已确认展示图",
+        "kind": "images",
+        "category": 6,
+        "images": [
+          {
+            "src": "assets/portfolio/concept-finals-20261013/xlii-final.png",
+            "alt": "天体捕食者已确认展示图，AI辅助图像重修",
+            "aspect": 1.7768331562167907
+          }
+        ],
+        "ratio": 1.7768331562167907
+      },
       {
         "title": "手绘草稿",
         "kind": "images",
@@ -419,6 +479,22 @@ window.siteContent = {
           }
         ],
         "ratio": 1.2
+      },
+      {
+        "title": "动态作品 · 跳转至B站",
+        "kind": "video",
+        "category": 7,
+        "images": [
+          {
+            "src": "assets/portfolio/concept-finals-20261013/xlii-final.png",
+            "alt": "天体捕食者视频入口"
+          }
+        ],
+        "video": {
+          "id": "BV125bc6XEqh",
+          "title": "第十三届世界渲染大赛｜XLII类天体捕食者"
+        },
+        "ratio": 1.7768331562167907
       },
       {
         "title": "视觉参考",
@@ -497,7 +573,7 @@ window.siteContent = {
       "id": "BV125bc6XEqh",
       "duration": "00:18"
     },
-    "disclosure": "手绘与过程图展示设计发展；参考页图片为灵感参考。"
+    "disclosure": "首图含 AI 辅助图像重修，已由用户确认用于网站展示；手绘与过程图展示设计发展，参考页为灵感参考。视频入口跳转至 B 站。"
   }
 ],
   sketches: [
@@ -510,7 +586,6 @@ window.siteContent = {
     "cover": "assets/portfolio/concepts-fit-20261010/visit-sketch-side.webp",
     "alt": "世外拜访白蛇手绘探索",
     "thesis": "沿着峡谷与瀑布，走进一次世外拜访。",
-    "boardBackground": "assets/portfolio/concepts-fit-20261010/visit-background.webp",
     "boardTheme": "light",
     "slides": [
       {
