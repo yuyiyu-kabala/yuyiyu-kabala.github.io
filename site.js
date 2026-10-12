@@ -92,14 +92,14 @@
   function home() {
     return `${sidebar()}<main id="main-content" class="main-shell home-shell">
       <div id="stage-mount">${stage(worlds[activeWorld], activeWorld)}</div>
-      <div class="filmstrip" role="group" aria-label="切换四个概念设计作品">
+      <div class="filmstrip" role="group" aria-label="切换三个概念设计作品">
         ${worlds.map((world, index) => `<button class="film-item ${index === activeWorld ? 'is-active' : ''}" type="button" data-world-index="${index}" aria-label="切换到${escapeHtml(world.title)}" aria-pressed="${index === activeWorld}">
           ${world.cover ? `<img src="${asset(world.cover)}" alt="">` : '<span class="film-empty" aria-hidden="true"></span>'}
           <span class="film-caption"><small>0${index + 1}</small><strong>${escapeHtml(world.title)}</strong></span>
         </button>`).join('')}
       </div>
       <p class="view-hint">选择下方作品，点击「概念展开」查看独立作品页。</p>
-      <section class="sketch-section" id="sketches"><div class="section-intro"><span class="section-kicker">STUDIES / OPEN SLOTS</span><h2>/初步概念设计稿</h2><p>机甲模型练习、星空花海与钢琴空间。</p></div>
+      <section class="sketch-section" id="sketches"><div class="section-intro"><span class="section-kicker">STUDIES / OPEN SLOTS</span><h2>/初步概念设计稿</h2><p>世外拜访、机甲模型练习、星空花海与钢琴空间。</p></div>
         <div class="sketch-grid">${sketches.map((sketch) => `<a class="sketch-card${sketch.cover ? ' has-cover' : ''}" href="${projectHref(sketch.id)}">${sketch.cover ? `<img src="${asset(sketch.cover)}" alt="${escapeHtml(sketch.alt)}">` : '<span class="reserved-mark">IMAGE RESERVED</span>'}<strong>${titleMarkup(sketch)}</strong><span>${sketch.cover ? '查看作品 ↗' : '查看预留页 ↗'}</span></a>`).join('')}</div>
       </section>
       <section class="more-section" id="other-media"><div class="section-intro"><span class="section-kicker">OTHER PRACTICES</span><h2>更多视觉练习</h2><p>风格化、电商渲染与动态作品是主线之外的补充。</p></div>

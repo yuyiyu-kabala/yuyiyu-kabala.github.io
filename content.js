@@ -352,105 +352,6 @@ window.siteContent = {
     "disclosure": ""
   },
   {
-    "id": "shiwai-visit",
-    "title": "世外拜访",
-    "status": "process",
-    "publishable": true,
-    "stateLabel": "CONCEPT STUDIES",
-    "cover": "",
-    "alt": "世外拜访完成图预留",
-    "thesis": "沿着峡谷与瀑布，走进一次世外拜访。",
-    "boardBackground": "assets/portfolio/concepts-fit-20261010/visit-background.webp",
-    "boardTheme": "light",
-    "slides": [
-      {
-        "title": "手绘探索",
-        "kind": "images",
-        "category": 3,
-        "images": [
-          {
-            "src": "assets/portfolio/concepts-fit-20261010/visit-sketch-top.webp",
-            "alt": "白蛇手绘俯视",
-            "aspect": 0.916030534351145
-          },
-          {
-            "src": "assets/portfolio/concepts-fit-20261010/visit-sketch-side.webp",
-            "alt": "白蛇手绘侧视",
-            "aspect": 1.4514889529298751
-          }
-        ],
-        "ratio": 1.7777777777777777
-      },
-      {
-        "title": "白模造型",
-        "kind": "images",
-        "category": 4,
-        "images": [
-          {
-            "src": "assets/portfolio/concepts-fit-20261010/visit-clay.webp",
-            "alt": "白蛇白模造型",
-            "aspect": 1.3792134831460674
-          }
-        ],
-        "ratio": 1.7777777777777777
-      },
-      {
-        "title": "视觉参考",
-        "kind": "references",
-        "category": 5,
-        "images": [
-          {
-            "src": "assets/portfolio/concepts-fit-20261010/visit-ref-01.webp",
-            "alt": "视觉参考",
-            "aspect": 2.1390374331550803
-          },
-          {
-            "src": "assets/portfolio/concepts-fit-20261010/visit-ref-02.webp",
-            "alt": "视觉参考",
-            "aspect": 1.7777777777777777
-          },
-          {
-            "src": "assets/portfolio/concepts-fit-20261010/visit-ref-03.webp",
-            "alt": "视觉参考",
-            "aspect": 1.525522041763341
-          },
-          {
-            "src": "assets/portfolio/concepts-fit-20261010/visit-ref-04.webp",
-            "alt": "视觉参考",
-            "aspect": 1.6797900262467191
-          },
-          {
-            "src": "assets/portfolio/concepts-fit-20261010/visit-ref-05.webp",
-            "alt": "视觉参考",
-            "aspect": 1.0559610705596107
-          },
-          {
-            "src": "assets/portfolio/concepts-fit-20261010/visit-ref-06.webp",
-            "alt": "视觉参考",
-            "aspect": 0.9259259259259259
-          },
-          {
-            "src": "assets/portfolio/concepts-fit-20261010/visit-ref-07.webp",
-            "alt": "视觉参考",
-            "aspect": 0.6391666666666667
-          },
-          {
-            "src": "assets/portfolio/concepts-fit-20261010/visit-ref-08.webp",
-            "alt": "视觉参考",
-            "aspect": 1.517786561264822
-          },
-          {
-            "src": "assets/portfolio/concepts-fit-20261010/visit-ref-09.webp",
-            "alt": "视觉参考",
-            "aspect": 2.2966507177033493
-          }
-        ],
-        "ratio": 1.7777777777777777
-      }
-    ],
-    "disclosure": "手绘与白模为设计过程；参考页图片为灵感参考。"
-  },
-  {
     "id": "xlii-starcatcher",
     "title": "天体捕食者",
     "status": "process",
@@ -600,6 +501,105 @@ window.siteContent = {
   }
 ],
   sketches: [
+  {
+    "id": "shiwai-visit",
+    "title": "世外拜访",
+    "status": "process",
+    "publishable": true,
+    "stateLabel": "CONCEPT STUDIES",
+    "cover": "assets/portfolio/concepts-fit-20261010/visit-sketch-side.webp",
+    "alt": "世外拜访白蛇手绘探索",
+    "thesis": "沿着峡谷与瀑布，走进一次世外拜访。",
+    "boardBackground": "assets/portfolio/concepts-fit-20261010/visit-background.webp",
+    "boardTheme": "light",
+    "slides": [
+      {
+        "title": "手绘探索",
+        "kind": "images",
+        "category": 3,
+        "images": [
+          {
+            "src": "assets/portfolio/concepts-fit-20261010/visit-sketch-top.webp",
+            "alt": "白蛇手绘俯视",
+            "aspect": 0.916030534351145
+          },
+          {
+            "src": "assets/portfolio/concepts-fit-20261010/visit-sketch-side.webp",
+            "alt": "白蛇手绘侧视",
+            "aspect": 1.4514889529298751
+          }
+        ],
+        "ratio": 1.7777777777777777
+      },
+      {
+        "title": "白模造型",
+        "kind": "images",
+        "category": 4,
+        "images": [
+          {
+            "src": "assets/portfolio/concepts-fit-20261010/visit-clay.webp",
+            "alt": "白蛇白模造型",
+            "aspect": 1.3792134831460674
+          }
+        ],
+        "ratio": 1.7777777777777777
+      },
+      {
+        "title": "视觉参考",
+        "kind": "references",
+        "category": 5,
+        "images": [
+          {
+            "src": "assets/portfolio/concepts-fit-20261010/visit-ref-01.webp",
+            "alt": "视觉参考",
+            "aspect": 2.1390374331550803
+          },
+          {
+            "src": "assets/portfolio/concepts-fit-20261010/visit-ref-02.webp",
+            "alt": "视觉参考",
+            "aspect": 1.7777777777777777
+          },
+          {
+            "src": "assets/portfolio/concepts-fit-20261010/visit-ref-03.webp",
+            "alt": "视觉参考",
+            "aspect": 1.525522041763341
+          },
+          {
+            "src": "assets/portfolio/concepts-fit-20261010/visit-ref-04.webp",
+            "alt": "视觉参考",
+            "aspect": 1.6797900262467191
+          },
+          {
+            "src": "assets/portfolio/concepts-fit-20261010/visit-ref-05.webp",
+            "alt": "视觉参考",
+            "aspect": 1.0559610705596107
+          },
+          {
+            "src": "assets/portfolio/concepts-fit-20261010/visit-ref-06.webp",
+            "alt": "视觉参考",
+            "aspect": 0.9259259259259259
+          },
+          {
+            "src": "assets/portfolio/concepts-fit-20261010/visit-ref-07.webp",
+            "alt": "视觉参考",
+            "aspect": 0.6391666666666667
+          },
+          {
+            "src": "assets/portfolio/concepts-fit-20261010/visit-ref-08.webp",
+            "alt": "视觉参考",
+            "aspect": 1.517786561264822
+          },
+          {
+            "src": "assets/portfolio/concepts-fit-20261010/visit-ref-09.webp",
+            "alt": "视觉参考",
+            "aspect": 2.2966507177033493
+          }
+        ],
+        "ratio": 1.7777777777777777
+      }
+    ],
+    "disclosure": "手绘与白模为设计过程；参考页图片为灵感参考。"
+  },
     {
       "id": "mecha",
       "title": "机甲 · 天庭号",
