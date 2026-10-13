@@ -81,10 +81,10 @@ img { display: block; max-width: 100%; }
 .explore-link span { font-size: 22px; }
 
 .filmstrip { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); background: #0d1a22; padding: 15px 16px 5px; gap: 7px; }
-.film-item { position: relative; display: block; min-width: 0; min-height: 195px; padding: 0; overflow: hidden; border: 0; border-top: 3px solid transparent; background: #243942; color: #d6dfdf; text-align: left; cursor: pointer; transition: min-height .25s ease, transform .25s ease, border-color .25s ease; }
+.film-item { position: relative; display: block; min-width: 0; min-height: 170px; padding: 0; overflow: hidden; border: 0; border-top: 3px solid transparent; background: #243942; color: #d6dfdf; text-align: left; cursor: pointer; transition: min-height .25s ease, transform .25s ease, border-color .25s ease; }
 .film-item.is-active { border-top-color: var(--accent); color: #fff; }
-.film-item:hover, .film-item:focus-visible { transform: translateY(-5px); min-height: 195px; }
-.film-item img, .film-empty { display: block; width: 100%; height: clamp(165px, 16vw, 230px); object-fit: cover; filter: brightness(.6) saturate(.5); transition: filter .3s ease, transform .3s ease; }
+.film-item:hover, .film-item:focus-visible { transform: translateY(-5px); min-height: 170px; }
+.film-item img, .film-empty { display: block; width: 100%; height: clamp(140px, 13vw, 185px); object-fit: cover; filter: brightness(.6) saturate(.5); transition: filter .3s ease, transform .3s ease; }
 .film-item:hover img, .film-item:focus-visible img, .film-item.is-active img { filter: brightness(.82) saturate(.75); transform: scale(1.035); }
 .film-empty { background: linear-gradient(130deg, #243c48, #101d25 68%); }
 .film-caption { position: relative; display: flex; gap: 10px; align-items: baseline; padding: 7px 7px 6px; font-size: 12px; }
@@ -159,6 +159,7 @@ img { display: block; max-width: 100%; }
 .mosaic-10 { grid-template-columns: repeat(5,minmax(0,1fr)); }
 .mosaic-5 { grid-template-columns: repeat(3,minmax(0,1fr)); }
 .mosaic-3 { grid-template-columns: repeat(3,minmax(0,1fr)); grid-template-rows: minmax(0,1fr); }
+.mosaic-4 { grid-template-columns: repeat(2,minmax(0,1fr)); }
 .title-dot { font-size: 1.2em; line-height: 0; vertical-align: baseline; }
 .sheet-reference-solo .sheet-art { inset: 5%; }
 .sheet-references .sheet-art, .sheet-reference-solo .sheet-art { top: max(12%, 44px); }

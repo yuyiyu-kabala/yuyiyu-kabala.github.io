@@ -11,13 +11,13 @@ window.siteContent = {
   worlds: [
   {
     "id": "wine-cellar-statue",
-    "title": "酒窖雕像",
+    "title": "失落雕像",
     "status": "approved",
     "publishable": true,
     "stateLabel": "SELECTED CONCEPT",
     "cover": "assets/portfolio/concepts-fit-20261010/wine-color.webp",
-    "alt": "酒窖雕像完成图",
-    "thesis": "一尊雕像，唤醒被时间封存的地下酒窖。",
+    "alt": "失落雕像完成图",
+    "thesis": "一尊雕像,有人将祂留在这里",
     "boardBackground": "assets/portfolio/concepts-fit-20261010/wine-background.webp",
     "boardTheme": "light",
     "slides": [
@@ -28,7 +28,7 @@ window.siteContent = {
         "images": [
           {
             "src": "assets/portfolio/concepts-fit-20261010/wine-color.webp",
-            "alt": "酒窖雕像完成图",
+            "alt": "失落雕像完成图",
             "aspect": 0.562799043062201,
             "clay": "assets/portfolio/concepts-fit-20261010/wine-clay.webp"
           }
@@ -207,12 +207,12 @@ window.siteContent = {
         "images": [
           {
             "src": "assets/portfolio/concepts-fit-20261010/wine-color.webp",
-            "alt": "酒窖雕像完成图",
+            "alt": "失落雕像完成图",
             "aspect": 0.562799043062201
           },
           {
             "src": "assets/portfolio/concepts-fit-20261010/wine-clay.webp",
-            "alt": "酒窖雕像白模",
+            "alt": "失落雕像白模",
             "aspect": 0.562799043062201
           }
         ],
@@ -232,21 +232,7 @@ window.siteContent = {
     "thesis": "未知星球上的海岸度假居所。",
     "slides": [
       {
-        "title": "定稿与白膜",
-        "kind": "compare",
-        "category": 6,
-        "images": [
-          {
-            "src": "assets/portfolio/concept-finals-20261013/beach-final.png",
-            "clay": "assets/portfolio/concept-finals-20261013/beach-clay.png",
-            "alt": "科幻沙滩已确认定稿",
-            "aspect": 1.3977379830348728
-          }
-        ],
-        "ratio": 1.3977379830348728
-      },
-      {
-        "title": "原工程制作过程",
+        "title": "原工程制作过程动图",
         "kind": "sequence",
         "category": 3,
         "images": [
@@ -269,45 +255,57 @@ window.siteContent = {
             "src": "assets/portfolio/concept-finals-20261013/beach-process-3.png",
             "alt": "科幻沙滩原工程过程 3",
             "aspect": 1.3977777777777778
+          }
+        ],
+        "ratio": 1.3977777777777778,
+        "frameDelay": 1200,
+        "lastFrameDelay": 2000
+      },
+      {
+        "title": "原工程过程稿 0–3",
+        "kind": "references",
+        "category": 3,
+        "images": [
+          {
+            "src": "assets/portfolio/concept-finals-20261013/beach-process-0.png",
+            "alt": "科幻沙滩原工程过程 0",
+            "aspect": 1.3977777777777778
           },
           {
-            "src": "assets/portfolio/concept-finals-20261013/beach-process-4.png",
-            "alt": "科幻沙滩原工程过程 4",
+            "src": "assets/portfolio/concept-finals-20261013/beach-process-1.png",
+            "alt": "科幻沙滩原工程过程 1",
+            "aspect": 1.3977777777777778
+          },
+          {
+            "src": "assets/portfolio/concept-finals-20261013/beach-process-2.png",
+            "alt": "科幻沙滩原工程过程 2",
+            "aspect": 1.3977777777777778
+          },
+          {
+            "src": "assets/portfolio/concept-finals-20261013/beach-process-3.png",
+            "alt": "科幻沙滩原工程过程 3",
             "aspect": 1.3977777777777778
           }
         ],
-        "ratio": 1.3977777777777778
+        "ratio": 1.7777777777777777
       },
       {
-        "title": "白模版本过程",
-        "kind": "images",
+        "title": "4号白膜与定稿并排",
+        "kind": "finished-pair",
         "category": 4,
         "images": [
           {
-            "src": "assets/portfolio/concepts-fit-20261010/beach-clay-01.webp",
-            "alt": "早期白模过程",
-            "aspect": 1.3977868375072802
+            "src": "assets/portfolio/concept-finals-20261013/beach-clay.png",
+            "alt": "科幻沙滩4号白膜",
+            "aspect": 1.3977777777777778
           },
           {
-            "src": "assets/portfolio/concepts-fit-20261010/beach-clay-13.webp",
-            "alt": "白模版本过程",
-            "aspect": 1.3977868375072802
-          }
-        ],
-        "ratio": 2.5
-      },
-      {
-        "title": "阶段修订过程",
-        "kind": "images",
-        "category": 4,
-        "images": [
-          {
-            "src": "assets/portfolio/concepts-fit-20261010/beach-process-v3-13.webp",
-            "alt": "阶段修订过程",
+            "src": "assets/portfolio/concept-finals-20261013/beach-final.png",
+            "alt": "科幻沙滩当前定稿",
             "aspect": 1.3977379830348728
           }
         ],
-        "ratio": 1.7777777777777777
+        "ratio": 2.5
       },
       {
         "title": "星球与海岸建筑参考",
@@ -319,14 +317,14 @@ window.siteContent = {
             "alt": "Jupiter Marble｜木星云层与明暗边界",
             "credit": "Kevin M. Gill；NASA/JPL-Caltech/SwRI/MSSS",
             "sourcePage": "https://science.nasa.gov/photojournal/jupiter-marble/",
-            "aspect": 1.0
+            "aspect": 1
           },
           {
             "src": "assets/portfolio/approved-references-20261011/beach-ref-04.webp",
             "alt": "Blue Marble 2012｜海洋、云层与大气边界",
             "credit": "NASA/NOAA/GSFC/Suomi NPP/VIIRS/Norman Kuring",
             "sourcePage": "https://science.nasa.gov/image-detail/amf-gsfc_20171208_archive_e001386/",
-            "aspect": 1.0
+            "aspect": 1
           },
           {
             "src": "assets/portfolio/approved-references-20261011/beach-ref-05.webp",
@@ -390,10 +388,24 @@ window.siteContent = {
             "alt": "Interior Design: Cyberpunk｜工业空间中的居住痕迹",
             "credit": "Nilo Neto / Brazilian Studio Tanichan，发布账号 NiloNetoKochan",
             "sourcePage": "https://forum.d5render.com/t/interior-design-cyberpunk/14258",
-            "aspect": 1.0
+            "aspect": 1
           }
         ],
         "ratio": 1.7777777777777777
+      },
+      {
+        "title": "定稿与白膜",
+        "kind": "compare",
+        "category": 6,
+        "images": [
+          {
+            "src": "assets/portfolio/concept-finals-20261013/beach-final.png",
+            "clay": "assets/portfolio/concept-finals-20261013/beach-clay.png",
+            "alt": "科幻沙滩已确认定稿",
+            "aspect": 1.3977379830348728
+          }
+        ],
+        "ratio": 1.3977379830348728
       }
     ],
     "disclosure": "定稿含 AI 辅助视觉制作；白膜与编号过程图为原工程阶段图。用户已确认本次定稿用于网站展示。"
@@ -406,7 +418,7 @@ window.siteContent = {
     "stateLabel": "SELECTED CONCEPT",
     "cover": "assets/portfolio/concept-finals-20261013/xlii-final.png",
     "alt": "天体捕食者已确认展示图",
-    "thesis": "一只穿行于宇宙结构之间的天体捕食者。",
+    "thesis": "穿行于宇宙结构之间的天体捕食者。",
     "boardBackground": "assets/portfolio/concepts-fit-20261010/xlii-background.webp",
     "boardTheme": "dark",
     "slides": [
@@ -509,7 +521,7 @@ window.siteContent = {
           {
             "src": "assets/portfolio/concepts-fit-20261010/xlii-ref-02.webp",
             "alt": "视觉参考",
-            "aspect": 1.0
+            "aspect": 1
           },
           {
             "src": "assets/portfolio/concepts-fit-20261010/xlii-ref-03.webp",

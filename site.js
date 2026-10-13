@@ -43,7 +43,7 @@
         <div class="sheet-art ${sheet.kind === 'references' ? `reference-mosaic mosaic-${sheet.images.length}` : ''}">
         ${sheet.kind === 'compare' ? `<figure class="gallery-image gallery-image-compare" style="--image-ratio:${sheet.images[0].aspect}" data-clay-reveal><div class="gallery-compare-frame"><img src="${asset(sheet.images[0].src)}" alt="${escapeHtml(sheet.images[0].alt)}" loading="lazy"><img class="gallery-clay" src="${asset(sheet.images[0].clay)}" alt="" aria-hidden="true" loading="eager"></div><button type="button" class="gallery-reveal-toggle art-control" data-icon-toggle aria-label="查看白模" aria-pressed="false">◐</button></figure>`
           : sheet.kind === 'video' ? `<a class="concept-video" href="https://www.bilibili.com/video/${encodeURIComponent(sheet.video.id)}/" target="_blank" rel="noopener noreferrer" aria-label="视频作品：${escapeHtml(sheet.video.title)}，点击跳转至 B 站"><img src="${asset(sheet.images[0].src)}" alt="${escapeHtml(sheet.images[0].alt)}" loading="lazy"><span class="video-mark" aria-hidden="true">▶</span><span class="concept-video-label">视频作品 · 点击跳转至 B 站 ↗</span></a>`
-          : sheet.kind === 'sequence' ? `<div class="drawing-sequence"><div class="drawing-stage">${sheet.images.map((item,n)=>`<img src="${asset(item.src)}" alt="${escapeHtml(item.alt)}" class="drawing-frame ${n===0?'is-active':''}" aria-hidden="${n!==0}" loading="eager">`).join('')}</div><button type="button" class="drawing-pause art-control" aria-label="暂停播放" aria-pressed="false">Ⅱ</button></div>`
+          : sheet.kind === 'sequence' ? `<div class="drawing-sequence" data-frame-delay="${sheet.frameDelay || 400}" data-last-frame-delay="${sheet.lastFrameDelay || 800}"><div class="drawing-stage">${sheet.images.map((item,n)=>`<img src="${asset(item.src)}" alt="${escapeHtml(item.alt)}" class="drawing-frame ${n===0?'is-active':''}" aria-hidden="${n!==0}" loading="eager">`).join('')}</div><button type="button" class="drawing-pause art-control" aria-label="暂停播放" aria-pressed="false">Ⅱ</button></div>`
           : sheet.images.map(item=>`<a class="sheet-image" href="${asset(item.src)}" target="_blank" rel="noopener" aria-label="放大查看：${escapeHtml(item.alt)}"><img src="${asset(item.src)}" alt="${escapeHtml(item.alt)}" loading="lazy"></a>`).join('')}
         </div>
         ${index===project.slides.length-1?'<span class="end-mark">End</span>':''}
@@ -219,7 +219,7 @@
         index=next;
         frames.forEach((frame,n)=>{frame.classList.toggle('is-active',n===index);frame.setAttribute('aria-hidden',String(n!==index));});
         schedule();
-      },index===frames.length-1?800:400);
+      },index===frames.length-1?Number(sequence.dataset.lastFrameDelay):Number(sequence.dataset.frameDelay));
     };
     const updatePause=()=>{pause.textContent=paused?'▶':'Ⅱ';pause.setAttribute('aria-label',paused?'播放过程':'暂停播放');pause.setAttribute('aria-pressed',String(paused));};
     pause.addEventListener('click',()=>{paused=!paused;updatePause();schedule();});
