@@ -17,7 +17,7 @@ window.siteContent = {
     "stateLabel": "SELECTED CONCEPT",
     "cover": "assets/portfolio/concepts-fit-20261010/wine-color.webp",
     "alt": "失落雕像完成图",
-    "thesis": "一尊雕像,有人将祂留在这里",
+    "thesis": "一尊雕像,有人将祂放在此处",
     "boardBackground": "assets/portfolio/concepts-fit-20261010/wine-background.webp",
     "boardTheme": "light",
     "slides": [
