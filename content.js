@@ -423,12 +423,13 @@ window.siteContent = {
     "boardTheme": "dark",
     "slides": [
       {
-        "title": "已确认展示图",
-        "kind": "images",
+        "title": "完成图与对应白膜",
+        "kind": "compare",
         "category": 6,
         "images": [
           {
             "src": "assets/portfolio/concept-finals-20261013/xlii-final.png",
+            "clay": "assets/portfolio/concept-finals-20261014/xlii-clay.png",
             "alt": "天体捕食者已确认展示图，AI辅助图像重修",
             "aspect": 1.7768331562167907
           }
